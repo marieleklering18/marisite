@@ -3,66 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DevFlow Landing Page</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Feel good inside and out</title>
+  <!-- Inter font for matching main website -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      background: #fff;
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 48px;
+      background: #fff;
+      position: relative;
+      z-index: 2;
+    }
+    .navbar-logo {
+      font-size: 2rem;
+      font-family: 'Inter', Arial, sans-serif;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+    }
+    .navbar-menu {
+      display: flex;
+      gap: 40px;
+      font-size: 1.2rem;
+    }
+    .navbar-menu a {
+      color: #111;
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.2s;
+    }
+    .navbar-menu a:hover {
+      color: #7c3aed;
+    }
+    .navbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .navbar-login {
+      color: #111;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin-right: 8px;
+    }
+    .navbar-cta {
+      background: #181820;
+      color: #fff;
+      border: none;
+      border-radius: 28px;
+      padding: 12px 32px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .navbar-cta:hover {
+      background: #33334d;
+    }
+    .hero {
+      position: relative;
+      width: 100vw;
+      height: 80vh;
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      filter: brightness(0.85);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      margin-left: 7vw;
+      max-width: 700px;
+    }
+    .hero-title {
+      font-size: 4rem;
+      font-weight: 700;
+      color: #111;
+      line-height: 1.05;
+      margin: 0;
+      letter-spacing: -0.03em;
+    }
+    @media (max-width: 900px) {
+      .navbar { flex-direction: column; gap: 16px; padding: 16px 8vw; }
+      .navbar-menu { gap: 20px; font-size: 1rem; }
+      .hero-content { margin-left: 4vw; }
+      .hero-title { font-size: 2.5rem; }
+    }
+    @media (max-width: 600px) {
+      .hero { height: 50vh; min-height: 300px; }
+      .hero-content { margin-left: 2vw; }
+      .hero-title { font-size: 1.5rem; }
+    }
+  </style>
 </head>
-<body class="bg-gradient-to-br from-[#f5f6ff] to-[#f7f3ff] min-h-screen">
-  <nav class="flex items-center justify-between px-8 py-6">
-    <div class="text-2xl font-bold">DevFlow</div>
-    <div class="space-x-6 hidden md:block">
-      <a href="#" class="text-gray-700 font-medium">Features</a>
-      <a href="#" class="text-gray-700 font-medium">Examples</a>
-      <a href="#" class="text-gray-700 font-medium">Testimonials</a>
-      <a href="#" class="text-gray-700 font-medium">Docs</a>
-      <a href="#" class="text-gray-700 font-medium">Community</a>
-      <a href="#" class="bg-black text-white px-4 py-1 rounded font-medium">GitHub Repo</a>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">glo</div>
+    <div class="navbar-menu">
+      <a href="#">Styles</a>
+      <a href="#">Schedule</a>
+      <a href="#">Teachers</a>
+      <a href="#">Intentional Living</a>
     </div>
-    <div class="space-x-3">
-      <a href="#" class="text-gray-700 font-medium">Log In</a>
-      <a href="#" class="bg-violet-600 text-white px-4 py-2 rounded font-semibold shadow hover:bg-violet-700 transition">Get Started</a>
+    <div class="navbar-actions">
+      <a href="#" class="navbar-login">Login</a>
+      <button class="navbar-cta">Try free for 7 days</button>
     </div>
   </nav>
-  <section class="flex flex-col md:flex-row items-center justify-between px-8 md:px-24 py-16">
-    <div class="max-w-xl">
-      <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
-        Build APIs in minutes, not months
+  <section class="hero">
+    <img class="hero-bg" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80" alt="Yoga by the sea" />
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Feel good<br>inside and out
       </h1>
-      <p class="text-lg text-gray-600 mb-8">
-        DevFlow's serverless API platform lets you focus on code, not infrastructure. Scale automatically from prototype to production.
-      </p>
-      <div class="flex space-x-4 mb-8">
-        <a href="#" class="bg-violet-600 text-white px-6 py-3 rounded font-semibold shadow hover:bg-violet-700 transition">Get Started Free</a>
-        <a href="#" class="bg-white border border-gray-300 px-6 py-3 rounded font-semibold text-gray-800 hover:bg-gray-50 transition">View Docs</a>
-      </div>
     </div>
-    <div class="mt-10 md:mt-0 md:ml-12 w-full md:w-[500px]">
-      <div class="bg-[#181c2a] text-white rounded-xl shadow-lg p-6 font-mono text-sm overflow-x-auto">
-        <pre>
-import &#123; DevFlow &#125; from '@devflow/api';
-
-// Initialize API endpoint
-const api = new DevFlow.API(&#123;
-  name: 'users-api',
-  auth: true
-&#125;);
-
-// Create a new user
-api.post('/users', async (req, res) =&gt; &#123;
-  const user = await db.users.create(req.body);
-  return res.json(user);
-&#125;);
-
-// Deploy with a single command
-api.deploy();
-        </pre>
-      </div>
-    </div>
-  </section>
-  <section class="text-center py-16 bg-white">
-    <h2 class="text-3xl font-bold mb-4">Built for developers, by developers</h2>
-    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-      Everything you need to build, deploy, and scale APIs with confidence.
-    </p>
   </section>
 </body>
 </html>
