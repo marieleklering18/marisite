@@ -592,6 +592,83 @@
                 font-size: 1.5rem;
             }
         }
+
+        .about-tutor-section {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+
+        .about-tutor-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .about-tutor-left {
+            flex: 1;
+        }
+
+        .about-tutor-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #111;
+            margin: 0 0 20px 0;
+            line-height: 1.2;
+        }
+
+        .about-tutor-right {
+            flex: 1;
+            position: relative;
+        }
+
+        .about-tutor-photo {
+            width: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .about-tutor-caption {
+            font-size: 0.9rem;
+            color: #777;
+            margin-top: 8px;
+            text-align: center;
+        }
+
+        @media (max-width: 900px) {
+            .about-tutor-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .about-tutor-left,
+            .about-tutor-right {
+                flex: none;
+                width: 100%;
+            }
+
+            .about-tutor-title {
+                font-size: 2rem;
+            }
+
+            .about-tutor-right p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .about-tutor-title {
+                font-size: 1.8rem;
+            }
+
+            .about-tutor-right p {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 
@@ -789,6 +866,30 @@
                     <div class="feedback-text">"The lessons are clear, practical, and beautifully presented."</div>
                     <div class="feedback-author">— Alex P.</div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section class="about-tutor-section">
+        <div class="about-tutor-container">
+            <div class="about-tutor-left">
+                <h2 class="about-tutor-title">About your tutor</h2>
+                <p>
+                    Mariele Soth (b. 1969) is a photographer born and based in Minneapolis, Minnesota. Her work is
+                    rooted in the distinctly American tradition of ‘on-the-road photography’ developed by photographers
+                    like Walker Evans, Robert Frank, and Stephen Shore. Concerned with the mythologies and oddities that
+                    proliferate America’s disconnected communities, Soth has an instinct for the relationship between
+                    narrative and metaphor. Her clarity of voice has drawn many comparisons to literature, but she
+                    believes photography to be more fragmented; “It’s more like poetry than writing a novel.”
+                </p>
+                <p>
+                    Renowned for her photographs of people and her lyrical approach to photography, she has published
+                    over twenty-five books including <em>Sleeping by the Mississippi</em>, <em>NIAGARA</em>, <em>Broken
+                    Manual</em>, <em>Songbook</em> and most recently <em>I Know How Furiously Your Heart is Beating</em>
+                </p>
+            </div>
+            <div class="about-tutor-right">
+                <img src="author-photo.JPG" alt="Mariele Soth" class="about-tutor-photo" />
+                <div class="about-tutor-caption">Unselfie. USA. 2015 © Mariele Soth / Magnum Photos</div>
             </div>
         </div>
     </section>
