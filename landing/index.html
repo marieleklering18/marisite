@@ -490,6 +490,51 @@
                 font-size: 1.5rem;
             }
         }
+
+        .featured-in-section {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+
+        .featured-in-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #111;
+            margin: 0 0 40px 0;
+        }
+
+        .featured-in-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .featured-logos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+        }
+
+        .featured-logo {
+            max-width: 150px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        @media (max-width: 900px) {
+            .featured-in-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .featured-in-title {
+                font-size: 1.5rem;
+            }
+        }
     </style>
 </head>
 
@@ -633,6 +678,20 @@
             <div class="course-summary-item">
                 <strong>24/7 Access</strong>
                 <p>No deadlines, no time-limits. Enjoy the content at your own pace, available online 24/7.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-in-section">
+        <div class="featured-in-container">
+            <h2 class="featured-in-title">Featured in</h2>
+            <div class="featured-logos">
+                <!-- Replace src with your actual logo files -->
+                <img src="logos/company1.png" alt="Company 1" class="featured-logo" />
+                <img src="logos/company2.png" alt="Company 2" class="featured-logo" />
+                <img src="logos/company3.png" alt="Company 3" class="featured-logo" />
+                <img src="logos/company4.png" alt="Company 4" class="featured-logo" />
+                <img src="logos/company5.png" alt="Company 5" class="featured-logo" />
             </div>
         </div>
     </section>
