@@ -484,6 +484,20 @@ body,
   position: relative;
 }
 
+.feedback-static-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.feedback-static-item {
+  max-width: 600px;
+  padding: 0 24px;
+}
+
 .feedback-text {
   font-size: 1.3rem;
   font-style: italic;

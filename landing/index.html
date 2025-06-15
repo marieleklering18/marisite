@@ -535,6 +535,62 @@
                 font-size: 1.5rem;
             }
         }
+
+        .feedback-carousel-section {
+            padding: 80px 0;
+        }
+
+        .feedback-carousel-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .feedback-carousel-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #111;
+            margin: 0 0 40px 0;
+        }
+
+        .feedback-static-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin: 0 auto;
+        }
+
+        .feedback-static-item {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .feedback-text {
+            font-size: 1.1rem;
+            color: #333;
+            margin: 0 0 8px 0;
+        }
+
+        .feedback-author {
+            font-size: 0.9rem;
+            color: #777;
+            margin: 0;
+        }
+
+        @media (max-width: 900px) {
+            .feedback-carousel-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .feedback-carousel-title {
+                font-size: 1.2rem;
+            }
+        }
     </style>
 </head> .feedback-carousel-section {
             padding: 80px 0;
@@ -618,7 +674,7 @@
                 <p>t-size: 1.5rem;
                     With a focus on practical skills and artistic vision, this course is designed for anyone
                     looking
-                    to enhance their photography, whether you're a beginner or an experienced shooter. Mariele's
+                    to enhance your photography, whether you're a beginner or an experienced shooter. Mariele's
                     engaging teaching style and insightful feedback will help you unlock your potential and find
                     your
                     unique voice as a photographer.
@@ -706,7 +762,7 @@
                 <p>
                     With a focus on practical skills and artistic vision, this course is designed for anyone
                     looking
-                    to enhance their photography, whether you're a beginner or an experienced shooter. Mariele's
+                    to enhance your photography, whether you're a beginner or an experienced shooter. Mariele's
                     engaging teaching style and insightful feedback will help you unlock your potential and find
                     your
                     unique voice as a photographer.
@@ -787,24 +843,20 @@
     <section class="feedback-carousel-section">
         <div class="feedback-carousel-container">
             <h2 class="feedback-carousel-title">What people are saying...</h2>
-            <div class="feedback-carousel">
-                <button class="carousel-arrow carousel-arrow-left">&#8592;</button>
-                <div class="carousel-track">
-                    <div class="carousel-slide active">
-                        <div class="feedback-text">"This course changed the way I see photography. Alec's approach is
-                            inspiring!"</div>
-                        <div class="feedback-author">— Jamie L.</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <div class="feedback-text">"A must for anyone wanting to tell stories with their camera."</div>
-                        <div class="feedback-author">— Morgan S.</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <div class="feedback-text">"The lessons are clear, practical, and beautifully presented."</div>
-                        <div class="feedback-author">— Alex P.</div>
-                    </div>
+            <div class="feedback-static-list">
+                <div class="feedback-static-item">
+                    <div class="feedback-text">"This course changed the way I see photography. Alec's approach is
+                        inspiring!"</div>
+                    <div class="feedback-author">— Jamie L.</div>
                 </div>
-                <button class="carousel-arrow carousel-arrow-right">&#8594;</button>
+                <div class="feedback-static-item">
+                    <div class="feedback-text">"A must for anyone wanting to tell stories with their camera."</div>
+                    <div class="feedback-author">— Morgan S.</div>
+                </div>
+                <div class="feedback-static-item">
+                    <div class="feedback-text">"The lessons are clear, practical, and beautifully presented."</div>
+                    <div class="feedback-author">— Alex P.</div>
+                </div>
             </div>
         </div>
     </section>
