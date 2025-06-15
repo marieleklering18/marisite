@@ -535,6 +535,63 @@
                 font-size: 1.5rem;
             }
         }
+
+        /* Feedback Section */
+        .feedback-section {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .feedback-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .feedback-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #111;
+            margin: 0 0 40px 0;
+        }
+
+        .feedback-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .feedback-item {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .feedback-text {
+            font-size: 1.1rem;
+            color: #333;
+            margin: 0 0 8px 0;
+        }
+
+        .feedback-author {
+            font-size: 0.9rem;
+            color: #777;
+            margin: 0;
+        }
+
+        @media (max-width: 900px) {
+            .feedback-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .feedback-title {
+                font-size: 1.5rem;
+            }
+        }
     </style>
 </head>
 
@@ -698,6 +755,32 @@
                 <img src="logos/company3.png" alt="Company 3" class="featured-logo" />
                 <img src="logos/company4.png" alt="Company 4" class="featured-logo" />
                 <img src="logos/company5.png" alt="Company 5" class="featured-logo" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section class="feedback-section">
+        <div class="feedback-container">
+            <h2 class="feedback-title">What people are saying...</h2>
+            <div class="feedback-list">
+                <div class="feedback-item">
+                    <!-- Optionally add a photo here later -->
+                    <!-- <img src="path-to-photo.jpg" alt="Feedback Author" class="feedback-photo" /> -->
+                    <div class="feedback-text">"This course changed the way I see photography. Alec's approach is
+                        inspiring!"</div>
+                    <div class="feedback-author">— Jamie L.</div>
+                </div>
+                <div class="feedback-item">
+                    <!-- <img src="path-to-photo.jpg" alt="Feedback Author" class="feedback-photo" /> -->
+                    <div class="feedback-text">"A must for anyone wanting to tell stories with their camera."</div>
+                    <div class="feedback-author">— Morgan S.</div>
+                </div>
+                <div class="feedback-item">
+                    <!-- <img src="path-to-photo.jpg" alt="Feedback Author" class="feedback-photo" /> -->
+                    <div class="feedback-text">"The lessons are clear, practical, and beautifully presented."</div>
+                    <div class="feedback-author">— Alex P.</div>
+                </div>
             </div>
         </div>
     </section>
