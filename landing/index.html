@@ -216,29 +216,165 @@
                 font-size: 1rem;
             }
         }
+
+        .main-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 32px;
+            background: #fff;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #111;
+            text-decoration: none;
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 24px;
+            font-size: 1rem;
+        }
+
+        .main-nav a {
+            color: #111;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.2s;
+        }
+
+        .main-nav a:hover {
+            color: #7c3aed;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .header-actions a {
+            color: #111;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 1rem;
+        }
+
+        .cart {
+            font-weight: 700;
+            color: #111;
+        }
+
+        .hero-play {
+            font-size: 3rem;
+            color: #fff;
+            margin-right: 16px;
+        }
+
+        .hero-title-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #fff;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .gift-btn,
+        .cart-btn {
+            background: #181820;
+            color: #fff;
+            border: none;
+            border-radius: 28px;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .gift-btn:hover,
+        .cart-btn:hover {
+            background: #33334d;
+        }
+
+        @media (max-width: 900px) {
+            .main-header {
+                flex-direction: column;
+                gap: 16px;
+                padding: 16px 8vw;
+            }
+
+            .main-nav {
+                flex-direction: column;
+                gap: 12px;
+                font-size: 0.9rem;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                height: 50vh;
+                min-height: 300px;
+            }
+
+            .hero-content {
+                margin-left: 2vw;
+            }
+
+            .hero-title {
+                font-size: 1.5rem;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="navbar-logo">glo</div>
-        <div class="navbar-menu">
-            <a href="#">Styles</a>
-            <a href="#">Schedule</a>
-            <a href="#">Teachers</a>
-            <a href="#">Intentional Living</a>
+    <header class="main-header">
+        <div class="logo">MAGNUM</div>
+        <nav class="main-nav">
+            <a href="#">Stories</a>
+            <a href="#">Photographers</a>
+            <a href="#">Learn</a>
+            <a href="#">Store</a>
+            <a href="#">Fine Prints</a>
+            <a href="#">A World in Color</a>
+            <a href="#">Work With Magnum</a>
+        </nav>
+        <div class="header-actions">
+            <a href="#">Login</a>
+            <span class="cart">Cart 0</span>
         </div>
-        <div class="navbar-actions">
-            <a href="#" class="navbar-login">Login</a>
-            <button class="navbar-cta">Try free for 7 days</button>
-        </div>
-    </nav>
+    </header>
     <section class="hero">
-        <img class="hero-bg" src="hero-bg.jpg" alt="Yoga by the sea" />
+        <img class="hero-bg" src="hero-bg.jpeg" alt="Hero Background" />
         <div class="hero-content">
-            <h1 class="hero-title">
-                Feel good<br>inside and out
-            </h1>
+            <div class="hero-title-row">
+                <span class="hero-play">&#9655;</span>
+                <h1>Alec Soth: Photographic Storytelling</h1>
+            </div>
+            <div class="hero-buttons">
+                <button class="gift-btn">GIVE AS A GIFT</button>
+                <button class="cart-btn">ADD TO CART - $99</button>
+            </div>
         </div>
     </section>
     <!-- Begin merged content from landing.html -->
