@@ -7,13 +7,13 @@ body,
 }
 
 .welcome-section {
-    background: #fff;
+    background: yellow !important;
     padding: 80px 0;
     width: 100%;
+    border: 5px solid red !important;
+    min-height: 200px;
+    z-index: 1000;
     position: relative;
-    z-index: 1;
-    border: 2px solid red;
-    /* Debug: Remove after confirming visibility */
 }
 
 .welcome-container {
