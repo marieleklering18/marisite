@@ -12,6 +12,8 @@ body,
     width: 100%;
     position: relative;
     z-index: 1;
+    border: 2px solid red;
+    /* Debug: Remove after confirming visibility */
 }
 
 .welcome-container {
