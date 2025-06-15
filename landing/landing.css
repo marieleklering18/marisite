@@ -176,6 +176,72 @@ body,
   color: #fff;
 }
 
+/* Welcome Ale section styles */
+.welcome-ale-section {
+  background: #fff;
+  padding: 64px 0 32px 0;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.welcome-ale-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1600px;
+  margin: 0 auto;
+  gap: 48px;
+  align-items: flex-start;
+  padding: 0 40px;
+}
+
+.welcome-ale-left {
+  flex: 1 1 0;
+  max-width: 700px;
+}
+
+.welcome-ale-left h1 {
+  font-size: 3.5rem;
+  font-weight: 400;
+  margin: 0 0 32px 0;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.welcome-ale-left p {
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 28px;
+}
+
+.welcome-ale-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.welcome-ale-right {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 700px;
+}
+
+.welcome-ale-img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.welcome-ale-caption {
+  font-size: 1.2rem;
+  color: #222;
+  margin-top: 0;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
 /* Responsive adjustments */
 @media (max-width: 900px) {
     .welcome-container {
@@ -210,5 +276,22 @@ body,
   .main-nav {
     flex-wrap: wrap;
     gap: 12px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .welcome-ale-container {
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 16px;
+  }
+  .welcome-ale-left h1 {
+    font-size: 2.2rem;
+  }
+  .welcome-ale-img {
+    max-width: 100%;
+  }
+  .welcome-ale-right, .welcome-ale-left {
+    max-width: 100%;
   }
 }
