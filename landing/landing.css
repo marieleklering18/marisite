@@ -629,3 +629,141 @@ body,
         max-width: 100%;
     }
 }
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 700px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 12px 8px;
+    gap: 10px;
+  }
+  .logo {
+    font-size: 1.3rem;
+    padding: 6px 10px;
+  }
+  .main-nav {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    font-size: 0.95rem;
+    padding: 0;
+  }
+  .main-nav a {
+    padding: 0 4px;
+    font-size: 0.95rem;
+  }
+  .header-actions {
+    gap: 12px;
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    height: 320px;
+    min-height: 220px;
+    padding: 0;
+  }
+  .hero-content {
+    padding: 0 0 18px 10px;
+    max-width: 100%;
+  }
+  .hero-title-row {
+    gap: 10px;
+  }
+  .hero h1 {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+  .hero-play {
+    font-size: 1.5rem;
+  }
+  .hero-buttons {
+    margin-top: 18px;
+    gap: 8px;
+  }
+  .gift-btn,
+  .cart-btn {
+    padding: 8px 12px;
+    font-size: 0.95rem;
+  }
+
+  .welcome-ale-section,
+  .learn-section,
+  .course-summary-section,
+  .featured-in-section,
+  .feedback-section,
+  .about-tutor-section {
+    padding: 32px 0 18px 0;
+  }
+
+  .welcome-ale-container,
+  .about-tutor-container {
+    flex-direction: column;
+    gap: 18px;
+    padding: 0 8px;
+  }
+  .welcome-ale-left h1,
+  .about-tutor-title {
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+  }
+  .welcome-ale-left p,
+  .about-tutor-left p {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+  .welcome-ale-img,
+  .about-tutor-photo {
+    max-width: 100%;
+    margin-bottom: 8px;
+  }
+  .welcome-ale-caption,
+  .about-tutor-caption {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .learn-title,
+  .featured-in-title,
+  .feedback-title {
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+    padding-left: 0;
+  }
+  .learn-grid,
+  .course-summary-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin: 0 2px;
+  }
+  .learn-item,
+  .course-summary-item {
+    padding: 16px 0;
+    min-height: unset;
+  }
+
+  .featured-logos {
+    gap: 12px;
+  }
+  .featured-logo {
+    max-width: 70px;
+    max-height: 24px;
+  }
+
+  .feedback-list {
+    gap: 18px;
+    margin-top: 12px;
+  }
+  .feedback-item {
+    padding: 0 6px;
+    max-width: 100%;
+  }
+  .feedback-text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  .feedback-author {
+    font-size: 0.95rem;
+  }
+}
