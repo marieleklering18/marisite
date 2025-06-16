@@ -245,38 +245,40 @@ body,
     font-family: 'Inter', Arial, sans-serif;
 }
 
-.welcome-ale-centered-title {
+.welcome-ale-centered {
   text-align: center;
   margin: 0 auto;
+  width: 100%;
 }
 
-.highlight-title {
-  display: block;
-  font-size: 1.4rem;
+.welcome-ale-title {
+  font-size: 2.3rem;
   font-weight: 600;
-  color: #2d2d2d;
-  letter-spacing: 0.02em;
-  margin-bottom: 0.2em;
+  margin-bottom: 32px;
+  margin-top: 12px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
-.highlight-subtitle {
+.welcome-ale-title span {
   display: block;
-  font-size: 2.2rem;
+  font-size: 2.7rem;
   font-weight: 700;
   color: #1a73e8;
+  margin-top: 8px;
   letter-spacing: -0.01em;
-  margin-bottom: 0.5em;
 }
 
-.welcome-ale-intro {
-  font-size: 1.15rem;
-  font-weight: 500;
-  color: #444;
-  margin: 18px 0 0 0;
-  background: #f3f7fa;
-  padding: 14px 18px;
-  border-radius: 8px;
-  display: inline-block;
+.welcome-ale-description {
+  font-size: 1.18rem;
+  color: #333;
+  margin: 22px auto;
+  max-width: 600px;
+  line-height: 1.6;
+  background: #f7fafd;
+  padding: 18px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(30,80,180,0.03);
 }
 
 /* Learn section styles */
