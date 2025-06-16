@@ -919,6 +919,125 @@
                 font-size: 1.5rem;
             }
         }
+
+        .stage-strategy-section {
+            margin-top: 80px;
+        }
+
+        .stage-strategy-banner {
+            background: #7c3aed;
+            color: #fff;
+            padding: 16px 0;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+        }
+
+        .stage-strategy-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .stage-strategy-left {
+            flex: 1;
+        }
+
+        .stage-strategy-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #111;
+            margin: 0 0 20px 0;
+            line-height: 1.2;
+        }
+
+        .stage-strategy-text {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .stage-strategy-highlight {
+            color: #7c3aed;
+            font-weight: 500;
+        }
+
+        .stage-strategy-cta {
+            margin: 16px 0;
+            font-weight: 500;
+            color: #111;
+        }
+
+        .stage-strategy-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .stage-strategy-link {
+            color: #7c3aed;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .stage-strategy-link:hover {
+            color: #5b2e91;
+        }
+
+        .enroll {
+            background: #181820;
+            color: #fff;
+            border: none;
+            border-radius: 28px;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .enroll:hover {
+            background: #33334d;
+        }
+
+        @media (max-width: 900px) {
+            .stage-strategy-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .stage-strategy-left,
+            .stage-strategy-right {
+                flex: none;
+                width: 100%;
+            }
+
+            .stage-strategy-title {
+                font-size: 2rem;
+            }
+
+            .stage-strategy-text {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .stage-strategy-title {
+                font-size: 1.5rem;
+            }
+
+            .stage-strategy-text {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 
@@ -1125,6 +1244,9 @@
         </div>
     </section>
     <section class="stage-strategy-section">
+        <div class="stage-strategy-banner">
+            <span>Featured Keynote</span>
+        </div>
         <div class="stage-strategy-container">
             <div class="stage-strategy-left">
                 <h2 class="stage-strategy-title">From Stage to Strategy: Where the Course Began</h2>
@@ -1134,26 +1256,27 @@
                         Magazine, sharing a story that was deeply personal, and one that struck a nerve.
                     </p>
                     <p>
-                        I spoke about burnout. Grief. Overthinking.<br>
-                        And the surprising way I found my way back, not through thinking harder, but through movement.
+                        I spoke about <span class="stage-strategy-highlight">burnout</span>. <span
+                            class="stage-strategy-highlight">Grief</span>. <span
+                            class="stage-strategy-highlight">Overthinking</span>.<br>
+                        And the surprising way I found my way back, not through thinking harder, but through <span
+                            class="stage-strategy-highlight">movement</span>.
                     </p>
                     <p>
                         That keynote became the seed for this course.
                     </p>
-                    <p>
+                    <p class="stage-strategy-cta">
                         If the talk moved you, this course will give you the tools to move with it.
                     </p>
                     <div class="stage-strategy-links">
                         <a href="#" class="stage-strategy-link" target="_blank">→ Listen to the keynote on
                             Spotify</a><br>
-                        <a href="#" class="stage-strategy-link" target="_blank">→ Enroll in the course</a>
+                        <a href="#" class="stage-strategy-link enroll" target="_blank">→ Enroll in the course</a>
                     </div>
                 </div>
             </div>
             <div class="stage-strategy-right">
-                <video class="stage-strategy-video" src="keynote-video.mp4" controls poster="keynote-video-poster.jpg"
-                    width="320" height="320"
-                    style="border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.12);background:#fff;">
+                <video class="stage-strategy-video" src="keynote-video.mp4" controls poster="keynote-video-poster.jpg">
                     Sorry, your browser doesn't support embedded videos.
                 </video>
             </div>

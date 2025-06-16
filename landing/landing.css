@@ -1114,10 +1114,25 @@ body,
 
 /* Stage Strategy section styles */
 .stage-strategy-section {
-    background: #1a73e8;
+    background: linear-gradient(135deg, #1a73e8 60%, #003366 100%);
     color: #fff;
-    padding: 64px 0 48px 0;
+    padding: 0 0 48px 0;
     font-family: 'Inter', Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.stage-strategy-banner {
+    width: 100%;
+    background: linear-gradient(90deg, #ffd600 0%, #ff6f00 100%);
+    color: #222;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+    padding: 14px 0 12px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    text-transform: uppercase;
 }
 
 .stage-strategy-container {
@@ -1126,44 +1141,89 @@ body,
     max-width: 1200px;
     margin: 0 auto;
     gap: 48px;
-    align-items: flex-start;
-    padding: 0 32px;
+    align-items: center;
+    padding: 48px 32px 0 32px;
 }
 
 .stage-strategy-left {
     flex: 1 1 0;
     max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .stage-strategy-title {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 2.2rem;
+    font-weight: 800;
     margin-bottom: 28px;
     color: #fff;
     letter-spacing: 0.01em;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-align: left;
 }
 
 .stage-strategy-text p {
-    font-size: 1.15rem;
+    font-size: 1.18rem;
     margin-bottom: 18px;
-    line-height: 1.6;
+    line-height: 1.7;
     color: #e3eefe;
+    text-align: left;
+}
+
+.stage-strategy-highlight {
+    color: #ffd600;
+    font-weight: 700;
+    background: rgba(255, 214, 0, 0.12);
+    padding: 0 4px;
+    border-radius: 4px;
+}
+
+.stage-strategy-cta {
+    font-size: 1.18rem;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 18px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 14px 18px;
+    border-radius: 8px;
+    text-align: left;
 }
 
 .stage-strategy-links {
     margin-top: 18px;
+    text-align: left;
 }
 
 .stage-strategy-link {
-    color: #fff;
-    font-weight: 600;
+    color: #ffd600;
+    font-weight: 700;
     text-decoration: underline;
     font-size: 1.08rem;
     transition: color 0.2s;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.stage-strategy-link.enroll {
+    color: #fff;
+    background: #ffd600;
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 10px;
+    font-weight: 800;
+    transition: background 0.2s, color 0.2s;
+}
+
+.stage-strategy-link.enroll:hover {
+    background: #ff6f00;
+    color: #fff;
 }
 
 .stage-strategy-link:hover {
-    color: #ffd600;
+    color: #ff6f00;
 }
 
 .stage-strategy-right {
@@ -1174,31 +1234,22 @@ body,
     min-width: 260px;
 }
 
-.stage-strategy-img {
-    width: 320px;
-    max-width: 100%;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
-    background: #fff;
-}
-
 .stage-strategy-video {
-    width: 320px;
+    width: 340px;
     max-width: 100%;
-    height: 320px;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+    height: 340px;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.18);
     background: #fff;
     display: block;
+    border: 4px solid #ffd600;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
     .stage-strategy-container {
         flex-direction: column;
         gap: 32px;
-        padding: 0 8px;
+        padding: 32px 8px 0 8px;
     }
 
     .stage-strategy-left,
@@ -1206,12 +1257,6 @@ body,
         max-width: 100%;
     }
 
-    .stage-strategy-img {
-        width: 100%;
-        max-width: 320px;
-        height: 180px;
-    }
-
     .stage-strategy-video {
         width: 100%;
         max-width: 320px;
@@ -1219,111 +1264,31 @@ body,
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .stage-strategy-section {
-        padding: 32px 0 24px 0;
+        padding: 0 0 24px 0;
     }
 
     .stage-strategy-title {
         font-size: 1.2rem;
         margin-bottom: 16px;
+        text-align: center;
     }
 
-    .stage-strategy-text p {
+    .stage-strategy-text p,
+    .stage-strategy-cta,
+    .stage-strategy-links {
         font-size: 1rem;
-        margin-bottom: 12px;
+        text-align: center;
     }
 
-    .stage-strategy-img {
-        max-width: 100%;
-        height: 100px;
+    .stage-strategy-container {
+        padding: 18px 2px 0 2px;
     }
 
     .stage-strategy-video {
         max-width: 100%;
-        height: 100px;
-    }
-}
-
-/* Carousel specific styles */
-.stage-strategy-carousel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 320px;
-    max-width: 100%;
-    position: relative;
-}
-
-.stage-strategy-carousel-arrow {
-    background: rgba(255, 255, 255, 0.7);
-    border: none;
-    font-size: 2rem;
-    color: #1a73e8;
-    cursor: pointer;
-    border-radius: 50%;
-    width: 38px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 8px;
-    transition: background 0.2s;
-    z-index: 2;
-}
-
-.stage-strategy-carousel-arrow:hover {
-    background: #ffd600;
-    color: #1a73e8;
-}
-
-.stage-strategy-carousel-track {
-    position: relative;
-    width: 220px;
-    height: 220px;
-    overflow: hidden;
-    display: block;
-}
-
-.stage-strategy-carousel-slide {
-    /* Only the active slide should be visible */
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 12px;
-    opacity: 0;
-    transition: opacity 0.4s;
-    z-index: 1;
-    pointer-events: none;
-}
-
-.stage-strategy-carousel-slide.active {
-    display: block;
-    opacity: 1;
-    z-index: 2;
-    pointer-events: auto;
-}
-
-@media (max-width: 900px) {
-
-    .stage-strategy-carousel,
-    .stage-strategy-carousel-track,
-    .stage-strategy-carousel-slide {
-        width: 100%;
-        max-width: 220px;
-        height: 180px;
-    }
-}
-
-@media (max-width: 600px) {
-
-    .stage-strategy-carousel-track,
-    .stage-strategy-carousel-slide {
-        max-width: 140px;
-        height: 100px;
+        height: 120px;
+        border-width: 2px;
     }
 }
