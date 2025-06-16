@@ -1257,31 +1257,34 @@ body,
 }
 
 .stage-strategy-carousel-track {
-  position: relative;
-  width: 220px;
-  height: 220px;
-  overflow: hidden;
-  display: block;
+    position: relative;
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    display: block;
 }
 
 .stage-strategy-carousel-slide {
-  position: absolute;
-  top: 0; left: 0;
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 12px;
-  opacity: 0;
-  transition: opacity 0.4s;
-  z-index: 1;
-  pointer-events: none;
-  display: block;
+    /* Only the active slide should be visible */
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    opacity: 0;
+    transition: opacity 0.4s;
+    z-index: 1;
+    pointer-events: none;
 }
 
 .stage-strategy-carousel-slide.active {
-  opacity: 1;
-  z-index: 2;
-  pointer-events: auto;
+    display: block;
+    opacity: 1;
+    z-index: 2;
+    pointer-events: auto;
 }
 
 @media (max-width: 900px) {

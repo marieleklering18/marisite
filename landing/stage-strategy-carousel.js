@@ -6,9 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function showSlide(idx) {
         slides.forEach((slide, i) => {
-            slide.classList.remove('active');
+            slide.classList.toggle('active', i === idx);
         });
-        slides[idx].classList.add('active');
     }
 
     if (left && right && slides.length) {
@@ -25,6 +24,5 @@ document.addEventListener('DOMContentLoaded', function () {
         showSlide(current);
     }
 });
-showSlide(current);
 
 
