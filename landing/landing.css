@@ -1274,6 +1274,7 @@ body,
     height: 220px;
     object-fit: cover;
     border-radius: 12px;
+    display: none;
     opacity: 0;
     transition: opacity 0.4s;
     z-index: 1;

@@ -8,10 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
     slides.forEach((slide, i) => {
       if (i === idx) {
         slide.classList.add('active');
-        slide.style.display = 'block';
       } else {
         slide.classList.remove('active');
-        slide.style.display = 'none';
       }
     });
   }
@@ -28,5 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     showSlide(current);
+  }
+});
   }
 });
