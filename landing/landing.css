@@ -592,6 +592,74 @@ body,
   }
 }
 
+/* Welcome MK section styles */
+.welcome-mk-section {
+  background: #fff;
+  padding: 56px 0 32px 0;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.welcome-mk-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.welcome-mk-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+  margin-top: 12px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.welcome-mk-title span {
+  display: block;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #1a73e8;
+  margin-top: 8px;
+  letter-spacing: -0.01em;
+}
+
+.welcome-mk-description {
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: left;
+}
+
+.welcome-mk-description p {
+  font-size: 1.18rem;
+  color: #333;
+  margin: 22px 0;
+  line-height: 1.6;
+  background: #f7fafd;
+  padding: 16px 18px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(30,80,180,0.03);
+}
+
+@media (max-width: 700px) {
+  .welcome-mk-title {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+  }
+  .welcome-mk-title span {
+    font-size: 1.4rem;
+    margin-top: 4px;
+  }
+  .welcome-mk-description {
+    max-width: 100%;
+    padding: 0 4px;
+  }
+  .welcome-mk-description p {
+    font-size: 1rem;
+    padding: 10px 8px;
+    margin: 12px 0;
+  }
+}
+
 /* Responsive adjustments */
 @media (max-width: 900px) {
     .welcome-container {
