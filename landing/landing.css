@@ -1261,29 +1261,27 @@ body,
     width: 220px;
     height: 220px;
     overflow: hidden;
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
 }
 
 .stage-strategy-carousel-slide {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
     width: 220px;
     height: 220px;
     object-fit: cover;
     border-radius: 12px;
-    display: none;
     opacity: 0;
     transition: opacity 0.4s;
     z-index: 1;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
     pointer-events: none;
+    display: block;
 }
 
 .stage-strategy-carousel-slide.active {
-    display: block;
     opacity: 1;
     z-index: 2;
     pointer-events: auto;
