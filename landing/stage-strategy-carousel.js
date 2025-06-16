@@ -25,8 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
         showSlide(current);
     }
 });
-        showSlide(current);
-    }
-});
-  }
-});
+showSlide(current);
+
+
