@@ -1223,3 +1223,86 @@ body,
         height: 100px;
     }
 }
+
+/* Carousel specific styles */
+.stage-strategy-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    max-width: 100%;
+    position: relative;
+}
+
+.stage-strategy-carousel-arrow {
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    font-size: 2rem;
+    color: #1a73e8;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 8px;
+    transition: background 0.2s;
+    z-index: 2;
+}
+
+.stage-strategy-carousel-arrow:hover {
+    background: #ffd600;
+    color: #1a73e8;
+}
+
+.stage-strategy-carousel-track {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stage-strategy-carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    opacity: 0;
+    transition: opacity 0.4s;
+    z-index: 1;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+    pointer-events: none;
+}
+
+.stage-strategy-carousel-slide.active {
+    opacity: 1;
+    z-index: 2;
+    pointer-events: auto;
+}
+
+@media (max-width: 900px) {
+
+    .stage-strategy-carousel,
+    .stage-strategy-carousel-track,
+    .stage-strategy-carousel-slide {
+        width: 100%;
+        max-width: 220px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .stage-strategy-carousel-track,
+    .stage-strategy-carousel-slide {
+        max-width: 140px;
+        height: 100px;
+    }
+}
