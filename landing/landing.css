@@ -1142,7 +1142,7 @@ body,
     margin: 0 auto;
     gap: 48px;
     align-items: center;
-    padding: 48px 32px 0 32px;
+    padding: 64px 48px 64px 48px; /* Increased top/bottom and left/right padding for more space */
 }
 
 .stage-strategy-left {
