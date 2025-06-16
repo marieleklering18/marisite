@@ -828,6 +828,65 @@
                 font-size: 0.9rem;
             }
         }
+
+        .not-workout-section {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .not-workout-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .not-workout-main {
+            font-size: 1.2rem;
+            color: #333;
+            margin: 0 0 24px 0;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .not-workout-flex {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .not-workout-block {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .not-workout-block-title {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #111;
+            margin: 0 0 12px 0;
+        }
+
+        @media (max-width: 900px) {
+            .not-workout-main {
+                font-size: 1rem;
+            }
+
+            .not-workout-block {
+                padding: 16px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .not-workout-main {
+                font-size: 0.9rem;
+            }
+
+            .not-workout-block {
+                padding: 12px;
+            }
+        }
     </style>
 </head>
 
@@ -923,6 +982,33 @@
                     <li>Social media as a resilience leak—and how to plug it</li>
                     <li>Use movement as a way to draw boundaries and recover focus</li>
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="not-workout-section">
+        <div class="not-workout-container">
+            <div class="not-workout-main">
+                <p>This is not another workout program.<br>
+                This is a nervous system reset.<br>
+                A return to your own body.<br>
+                A new language for your resilience.</p>
+            </div>
+            <div class="not-workout-flex">
+                <div class="not-workout-block">
+                    <div class="not-workout-block-title">You won’t find:</div>
+                    <ul>
+                      <li>Fitness goals</li>
+                      <li>Calorie counting</li>
+                      <li>“Just do it” motivation</li>
+                    </ul>
+                </div>
+                <div class="not-workout-block">
+                    <div class="not-workout-block-title">You’ll find:</div>
+                    <ul>
+                      <li>Relief. Agency. A way forward.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
