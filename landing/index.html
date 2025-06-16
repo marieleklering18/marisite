@@ -669,6 +669,106 @@
                 font-size: 0.9rem;
             }
         }
+
+        .welcome-mk-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+
+        .welcome-mk-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .welcome-mk-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #111;
+            margin: 0 0 20px 0;
+            line-height: 1.2;
+        }
+
+        .welcome-mk-description {
+            flex: 1;
+        }
+
+        .welcome-mk-tagline {
+            font-size: 1.2rem;
+            color: #333;
+            margin: 0 0 16px 0;
+            line-height: 1.4;
+        }
+
+        .welcome-mk-poem {
+            font-size: 1.1rem;
+            color: #333;
+            margin: 0 0 16px 0;
+            line-height: 1.4;
+        }
+
+        .welcome-mk-highlight {
+            font-size: 1.1rem;
+            color: #111;
+            margin: 0 0 16px 0;
+            line-height: 1.4;
+        }
+
+        .welcome-mk-key {
+            font-size: 1.1rem;
+            color: #111;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .welcome-mk-bold {
+            font-weight: 700;
+        }
+
+        @media (max-width: 900px) {
+            .welcome-mk-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .welcome-mk-title {
+                font-size: 2rem;
+            }
+
+            .welcome-mk-tagline,
+            .welcome-mk-poem,
+            .welcome-mk-highlight,
+            .welcome-mk-key {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .welcome-mk-title {
+                font-size: 1.5rem;
+            }
+
+            .welcome-mk-tagline {
+                font-size: 1rem;
+            }
+
+            .welcome-mk-poem {
+                font-size: 0.9rem;
+            }
+
+            .welcome-mk-highlight,
+            .welcome-mk-key {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 
@@ -707,15 +807,21 @@
             <h1 class="welcome-mk-title">Mariele Klering teaches<br><span>Movement as a Language of Resilience</span>
             </h1>
             <div class="welcome-mk-description">
-                <p>
-                    Discover how movement can become a powerful tool for resilience, self-discovery, and transformation.
+                <p class="welcome-mk-tagline">
+                    A self-paced course for people who think too much and move too little
                 </p>
-                <p>
-                    Mariele shares her journey from the tech industry to the Jiu-Jitsu mat, exploring the intersections
-                    of strength, loss, identity, and the quiet power of doing hard things.
+                <div class="welcome-mk-poem">
+                    <p>You’ve read the books.<br>
+                        You’ve made the plans.<br>
+                        But your body still feels stuck, and your mind won’t shut up.</p>
+                </div>
+                <p class="welcome-mk-highlight">
+                    This isn’t because you're lazy. It’s because most advice forgets one thing:<br>
+                    <strong>You are not a brain on a stick.</strong>
                 </p>
-                <p>
-                    Her approach invites you to see movement as a language—one that can hold, challenge, and reshape us.
+                <p class="welcome-mk-key">
+                    When your mind spirals, your body holds the key.<br>
+                    <span class="welcome-mk-bold">This course shows you how to use it.</span>
                 </p>
             </div>
         </div>
