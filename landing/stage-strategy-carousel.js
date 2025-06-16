@@ -6,12 +6,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function showSlide(idx) {
         slides.forEach((slide, i) => {
-            if (i === idx) {
-                slide.classList.add('active');
-            } else {
-                slide.classList.remove('active');
-            }
+            slide.classList.remove('active');
         });
+        slides[idx].classList.add('active');
     }
 
     if (left && right && slides.length) {
@@ -25,6 +22,9 @@ document.addEventListener('DOMContentLoaded', function () {
             showSlide(current);
         });
 
+        showSlide(current);
+    }
+});
         showSlide(current);
     }
 });
