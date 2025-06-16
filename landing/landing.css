@@ -1282,6 +1282,7 @@ body,
 }
 
 .stage-strategy-carousel-slide.active {
+    display: block;
     opacity: 1;
     z-index: 2;
     pointer-events: auto;
