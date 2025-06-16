@@ -245,6 +245,40 @@ body,
     font-family: 'Inter', Arial, sans-serif;
 }
 
+.welcome-ale-centered-title {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.highlight-title {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2d2d2d;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.2em;
+}
+
+.highlight-subtitle {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a73e8;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5em;
+}
+
+.welcome-ale-intro {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #444;
+  margin: 18px 0 0 0;
+  background: #f3f7fa;
+  padding: 14px 18px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
 /* Learn section styles */
 .learn-section {
     background: #fff;
