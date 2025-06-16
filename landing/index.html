@@ -834,43 +834,49 @@
             background: #fff;
         }
 
-        .not-workout-container {
+        .not-workout-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             max-width: 800px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        .not-workout-block {
-            background: #f9f9f9;
-            border-radius: 12px;
-            padding: 24px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        .not-workout-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #111;
+            margin: 0 0 16px 0;
+            text-align: center;
         }
 
-        .not-workout-block-title {
+        .not-workout-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
             font-size: 1.1rem;
-            font-weight: 500;
-            color: #111;
-            margin: 0 0 12px 0;
+            color: #333;
+            line-height: 1.6;
         }
 
         @media (max-width: 900px) {
-            .not-workout-main {
-                font-size: 1rem;
+            .not-workout-title {
+                font-size: 1.2rem;
             }
 
-            .not-workout-block {
-                padding: 16px;
+            .not-workout-list {
+                font-size: 1rem;
             }
         }
 
         @media (max-width: 600px) {
-            .not-workout-main {
-                font-size: 0.9rem;
+            .not-workout-title {
+                font-size: 1rem;
             }
 
-            .not-workout-block {
-                padding: 12px;
+            .not-workout-list {
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -973,30 +979,28 @@
     </section>
 
     <section class="not-workout-section">
-        <div class="not-workout-container">
-            <div class="not-workout-block not-workout-block-full">
-                <div class="not-workout-main">
-                    <p>This is not another workout program.<br>
-                        This is a nervous system reset.<br>
-                        A return to your own body.<br>
-                        A new language for your resilience.</p>
-                </div>
-                <div class="not-workout-flex">
-                    <div class="not-workout-block">
-                        <div class="not-workout-block-title">You won’t find:</div>
-                        <ul>
-                            <li>Fitness goals</li>
-                            <li>Calorie counting</li>
-                            <li>“Just do it” motivation</li>
-                        </ul>
-                    </div>
-                    <div class="not-workout-block">
-                        <div class="not-workout-block-title">You’ll find:</div>
-                        <ul>
-                            <li>Relief. Agency. A way forward.</li>
-                        </ul>
-                    </div>
-                </div>
+        <div class="not-workout-grid">
+            <div class="not-workout-item">
+                <div class="not-workout-title">This is not another workout program.</div>
+                <ul class="not-workout-list">
+                    <li>This is a nervous system reset.</li>
+                    <li>A return to your own body.</li>
+                    <li>A new language for your resilience.</li>
+                </ul>
+            </div>
+            <div class="not-workout-item">
+                <div class="not-workout-title">You won’t find:</div>
+                <ul class="not-workout-list">
+                    <li>Fitness goals</li>
+                    <li>Calorie counting</li>
+                    <li>“Just do it” motivation</li>
+                </ul>
+            </div>
+            <div class="not-workout-item">
+                <div class="not-workout-title">You’ll find:</div>
+                <ul class="not-workout-list">
+                    <li>Relief. Agency. A way forward.</li>
+                </ul>
             </div>
         </div>
     </section>
