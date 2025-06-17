@@ -481,9 +481,10 @@ body,
 .feedback-photo {
     width: 64px;
     height: 64px;
-    border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 16px;
+    border-radius: 8px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -1319,6 +1320,35 @@ body,
 
 .feedback-in-strategy .feedback-list {
     gap: 24px;
+}
+
+.feedback-in-strategy .feedback-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.feedback-enroll-btn {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.feedback-enroll-btn .enroll {
+    font-size: 1.15rem;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 800;
+    background: #ffd600;
+    color: #1a73e8;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s, color 0.2s;
+}
+
+.feedback-enroll-btn .enroll:hover {
+    background: #ff6f00;
+    color: #fff;
 }
 
 @media (max-width: 700px) {
