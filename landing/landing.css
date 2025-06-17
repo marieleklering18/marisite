@@ -1142,7 +1142,8 @@ body,
     margin: 0 auto;
     gap: 48px;
     align-items: center;
-    padding: 64px 48px 64px 48px; /* Increased top/bottom and left/right padding for more space */
+    padding: 64px 48px 64px 48px;
+    /* Increased top/bottom and left/right padding for more space */
 }
 
 .stage-strategy-left {
@@ -1290,5 +1291,39 @@ body,
         max-width: 100%;
         height: 120px;
         border-width: 2px;
+    }
+}
+
+/* New Feedback in Strategy section styles */
+.feedback-in-strategy {
+    margin-top: 48px;
+    background: transparent;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    padding-top: 32px;
+}
+
+.feedback-in-strategy .feedback-title {
+    color: #ffd600;
+}
+
+.feedback-in-strategy .feedback-text {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 8px;
+    padding: 12px 16px;
+}
+
+.feedback-in-strategy .feedback-author {
+    color: #ffd600;
+}
+
+.feedback-in-strategy .feedback-list {
+    gap: 24px;
+}
+
+@media (max-width: 700px) {
+    .feedback-in-strategy {
+        padding-top: 18px;
+        margin-top: 24px;
     }
 }
