@@ -141,12 +141,13 @@ body,
     display: flex;
     align-items: center;
     gap: 18px;
-    background: #fffbea;
+    /* Remove background and box-shadow */
+    background: none;
+    box-shadow: none;
     padding: 18px 28px;
     border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(255, 214, 0, 0.10);
     margin-bottom: 18px;
-    color: #222 !important;
+    color: #fff; /* Use white for strong contrast on dark backgrounds */
 }
 
 .hero-play {
