@@ -485,16 +485,16 @@ body,
 }
 
 .feedback-photo {
-  width: 220px;
-  height: auto;
-  max-width: 100%;
-  object-fit: contain;
-  border-radius: 12px;
-  margin-bottom: 18px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    width: 1100px;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .feedback-text {
@@ -1122,12 +1122,12 @@ body,
 
 /* Stage Strategy section styles */
 .stage-strategy-section {
-  background: linear-gradient(135deg, #ffe0ef 60%, #f8bbd0 100%);
-  color: #222;
-  padding: 0 0 48px 0;
-  font-family: 'Inter', Arial, sans-serif;
-  position: relative;
-  overflow: hidden;
+    background: linear-gradient(135deg, #ffe0ef 60%, #f8bbd0 100%);
+    color: #222;
+    padding: 0 0 48px 0;
+    font-family: 'Inter', Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
 }
 
 .stage-strategy-banner {
