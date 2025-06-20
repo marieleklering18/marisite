@@ -147,7 +147,8 @@ body,
     padding: 18px 28px;
     border-radius: 12px;
     margin-bottom: 18px;
-    color: #fff; /* Use white for strong contrast on dark backgrounds */
+    color: #fff;
+    /* Use white for strong contrast on dark backgrounds */
 }
 
 .hero-play {
