@@ -163,6 +163,14 @@ body,
     letter-spacing: 0.01em;
 }
 
+.hero-subhead {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #ffd600;
+    margin-top: 6px;
+    letter-spacing: 0.01em;
+}
+
 .hero-buttons {
     margin-top: 32px;
     display: flex;
