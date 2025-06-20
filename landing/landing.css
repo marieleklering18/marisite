@@ -505,13 +505,13 @@ body,
 }
 
 .feedback-title {
-    color: #ff6f00;
+    color: #d7263d !important;
     font-family: 'Georgia', serif;
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 40px;
     letter-spacing: 0.01em;
-    text-shadow: 0 2px 8px rgba(255, 214, 0, 0.08);
+    text-shadow: 0 2px 8px rgba(215, 38, 61, 0.08);
 }
 
 .feedback-list {
