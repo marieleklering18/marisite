@@ -426,14 +426,16 @@ body,
 }
 
 .featured-logo {
+  /* Remove the red border and add a gold highlight with shadow for importance */
+  border: 3px solid #ffd600;
+  box-shadow: 0 4px 24px rgba(255, 214, 0, 0.15), 0 2px 8px rgba(30,40,90,0.10);
+  border-radius: 18px;
+  background: #fffbea;
+  padding: 18px 32px;
   max-width: 320px;
   max-height: 120px;
   width: auto;
   height: auto;
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 6px 24px rgba(30,40,90,0.10);
-  padding: 24px 40px;
   display: block;
   opacity: 0.97;
   filter: grayscale(100%) contrast(1.15);
@@ -441,14 +443,17 @@ body,
     opacity 0.2s,
     filter 0.2s,
     transform 0.2s,
-    box-shadow 0.2s;
+    box-shadow 0.2s,
+    border-color 0.2s;
 }
 
 .featured-logo:hover {
   opacity: 1;
   filter: none;
   transform: scale(1.08);
-  box-shadow: 0 12px 36px rgba(30,40,90,0.18);
+  box-shadow: 0 12px 36px rgba(255, 214, 0, 0.22), 0 12px 36px rgba(30,40,90,0.18);
+  border-color: #ffb300;
+  background: #fffde7;
 }
 
 @media (max-width: 900px) {
@@ -1387,5 +1392,3 @@ body,
     background: #ff6f00;
     color: #fff;
 }
-
-.featured-logo { border: 5px solid red !important; }
