@@ -505,7 +505,7 @@ body,
 }
 
 .feedback-title {
-    color: #d7263d !important;
+    color: #000;
     font-family: 'Georgia', serif;
     font-size: 2rem;
     font-weight: 700;
