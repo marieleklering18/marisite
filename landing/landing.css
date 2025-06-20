@@ -1168,6 +1168,7 @@ body,
     font-family: 'Inter', Arial, sans-serif;
     position: relative;
     overflow: hidden;
+    text-align: center;
 }
 
 .stage-strategy-banner {
@@ -1191,7 +1192,8 @@ body,
     gap: 48px;
     align-items: center;
     padding: 64px 48px 64px 48px;
-    /* Increased top/bottom and left/right padding for more space */
+    justify-content: center;
+    text-align: center;
 }
 
 .stage-strategy-left {
