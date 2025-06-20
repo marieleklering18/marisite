@@ -485,15 +485,16 @@ body,
 }
 
 .feedback-photo {
-    width: 64px;
-    height: 64px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 14px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  width: 220px;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .feedback-text {
@@ -1121,8 +1122,8 @@ body,
 
 /* Stage Strategy section styles */
 .stage-strategy-section {
-    background: linear-gradient(135deg, #1a73e8 60%, #003366 100%);
-    color: #fff;
+    background: linear-gradient(135deg, #f5f7fa 60%, #e3e9f3 100%);
+    color: #222;
     padding: 0 0 48px 0;
     font-family: 'Inter', Arial, sans-serif;
     position: relative;
@@ -1165,7 +1166,7 @@ body,
     font-size: 2.2rem;
     font-weight: 800;
     margin-bottom: 28px;
-    color: #fff;
+    color: #1a237e;
     letter-spacing: 0.01em;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     text-align: left;
@@ -1175,7 +1176,7 @@ body,
     font-size: 1.18rem;
     margin-bottom: 18px;
     line-height: 1.7;
-    color: #e3eefe;
+    color: #333;
     text-align: left;
 }
 
@@ -1189,11 +1190,11 @@ body,
 
 .stage-strategy-cta {
     font-size: 1.18rem;
-    color: #fff;
+    color: #1a237e;
     font-weight: 600;
     margin-top: 24px;
     margin-bottom: 18px;
-    background: rgba(255, 255, 255, 0.08);
+    background: #e3e9f3;
     padding: 14px 18px;
     border-radius: 8px;
     text-align: left;
@@ -1205,7 +1206,7 @@ body,
 }
 
 .stage-strategy-link {
-    color: #ffd600;
+    color: #1a73e8;
     font-weight: 700;
     text-decoration: underline;
     font-size: 1.08rem;
@@ -1215,8 +1216,8 @@ body,
 }
 
 .stage-strategy-link.enroll {
+    background: #1a73e8;
     color: #fff;
-    background: #ffd600;
     padding: 8px 18px;
     border-radius: 6px;
     text-decoration: none;
@@ -1226,8 +1227,8 @@ body,
 }
 
 .stage-strategy-link.enroll:hover {
-    background: #ff6f00;
-    color: #fff;
+    background: #ffd600;
+    color: #1a73e8;
 }
 
 .stage-strategy-link:hover {
