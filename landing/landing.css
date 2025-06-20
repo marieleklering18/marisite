@@ -353,6 +353,12 @@ body,
     line-height: 1.4;
 }
 
+.learn-icon {
+    margin-right: 10px;
+    font-size: 1.25em;
+    vertical-align: middle;
+}
+
 @media (max-width: 900px) {
     .learn-grid {
         grid-template-columns: 1fr;
