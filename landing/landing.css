@@ -135,6 +135,11 @@ body,
     display: flex;
     align-items: center;
     gap: 18px;
+    background: linear-gradient(90deg, #ffd600 0%, #fffbe7 100%);
+    padding: 18px 28px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(255,214,0,0.10);
+    margin-bottom: 18px;
 }
 
 .hero-play {
