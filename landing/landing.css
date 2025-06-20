@@ -1153,14 +1153,14 @@ body,
 }
 
 .stage-strategy-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: none;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: none;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .stage-strategy-title {
