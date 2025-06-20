@@ -1388,9 +1388,4 @@ body,
     color: #fff;
 }
 
-@media (max-width: 700px) {
-    .feedback-in-strategy {
-        padding-top: 18px;
-        margin-top: 24px;
-    }
-}
+.featured-logo { border: 5px solid red !important; }
