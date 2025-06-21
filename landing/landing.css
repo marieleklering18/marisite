@@ -11,7 +11,7 @@ body {
     font-size: 18px;
     line-height: 1.6;
     color: #222;
-    background: #fafbfc;
+    background: linear-gradient(135deg, #f0f4ff 0%, #fafbfc 100%);
 }
 
 h1,
@@ -38,6 +38,7 @@ li {
     margin-top: 2em;
     margin-bottom: 0.5em;
     letter-spacing: 0.01em;
+    color: #005fcc;
 }
 
 .subtitle {
@@ -394,6 +395,15 @@ li {
     max-width: 800px;
     width: 90%;
     text-align: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.learn-item-box:hover {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px) scale(1.02);
 }
 
 .learn-item strong {
@@ -1648,4 +1658,55 @@ li {
     .learn-item>div>div {
         margin-bottom: 12px;
     }
+}
+
+.learn-item-box,
+.faq-item,
+header,
+nav,
+section,
+footer {
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 700px) {
+    .learn-item-box {
+        max-width: 98vw;
+        padding: 16px 8px;
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header,
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fafbfc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s, transform 0.7s;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: none;
 }

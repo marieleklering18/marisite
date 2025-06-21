@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header class="main-header">
+    <header class="main-header fade-in">
         <div class="logo">MK</div>
         <nav class="main-nav">
             <a href="#welcome">Welcome</a>
@@ -79,11 +79,12 @@
                 </div>
             </div>
         </section>
-        <section class="learn-section" style="display: flex; flex-direction: column; align-items: center;">
+        <section class="learn-section fade-in">
             <h2 class="learn-title">What you'll learn</h2>
             <div class="learn-grid">
                 <div class="learn-item-box"
                     style="background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); padding: 24px 32px; margin: 16px 0; max-width: 500px; width: 100%; text-align: center;">
+                    <span class="learn-icon" aria-hidden="true" style="font-size:2.5rem;">📘</span>
                     <div class="learn-item">
                         <strong>Rewire Your Relationship with Overthinking</strong>
                         <div>
@@ -106,6 +107,7 @@
                 </div>
                 <div class="learn-item-box"
                     style="background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); padding: 24px 32px; margin: 16px 0; max-width: 500px; width: 100%; text-align: center;">
+                    <span class="learn-icon" aria-hidden="true" style="font-size:2.5rem;">💡</span>
                     <div class="learn-item">
                         <strong>Pick Your Movement, Pick Your Medicine</strong>
                         <div>
@@ -126,6 +128,7 @@
                 </div>
                 <div class="learn-item-box"
                     style="background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); padding: 24px 32px; margin: 16px 0; max-width: 500px; width: 100%; text-align: center;">
+                    <span class="learn-icon" aria-hidden="true" style="font-size:2.5rem;">🔄</span>
                     <div class="learn-item">
                         <strong>Keep the conversation going</strong>
                         <div>
@@ -147,6 +150,7 @@
                 </div>
                 <div class="learn-item-box"
                     style="background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); padding: 24px 32px; margin: 16px 0; max-width: 500px; width: 100%; text-align: center;">
+                    <span class="learn-icon" aria-hidden="true" style="font-size:2.5rem;">🛠️</span>
                     <div class="learn-item">
                         <strong>Cognitive Self-Defense Toolkit</strong>
                         <div>
@@ -302,7 +306,7 @@
                 </div>
             </div>
         </div>
-        <section class="faq-section">
+        <section class="faq-section fade-in">
             <h2 class="faq-title">Frequently Asked Questions</h2>
             <div class="faq-list">
                 <div class="faq-item">
@@ -364,9 +368,21 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="fade-in">
         <script src="stage-strategy-carousel.js"></script>
     </footer>
+    <script>
+        // Fade-in on scroll
+        const fadeEls = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        fadeEls.forEach(el => observer.observe(el));
+    </script>
 </body>
 
 </html>
