@@ -103,13 +103,17 @@ p, li, button, .faq-question { font-size: 1.125rem; }
 
 /* Welcome section styles */
 .welcome-section {
-    background: magenta !important;
-    color: white !important;
-    border: 8px dashed black !important;
-    min-height: 100px !important;
-    font-size: 2rem !important;
-    z-index: 9999 !important;
-    position: relative !important;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    max-width: 900px;
+    margin: 2em auto 3em auto;
+    padding: 2.5em 2em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
 }
 
 .welcome-container {
