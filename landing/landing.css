@@ -33,7 +33,8 @@ li {
 }
 
 .title {
-    font-size: 2.5rem; /* Main page title */
+    font-size: 2.5rem;
+    /* Main page title */
     font-weight: 700;
     margin-top: 2em;
     margin-bottom: 0.5em;
@@ -42,7 +43,8 @@ li {
 }
 
 .subtitle {
-    font-size: 1.5rem; /* Section subtitle */
+    font-size: 1.5rem;
+    /* Section subtitle */
     font-weight: 500;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
@@ -50,62 +52,89 @@ li {
 }
 
 .text {
-    font-size: 1.125rem; /* Main body text */
+    font-size: 1.125rem;
+    /* Main body text */
     font-weight: 400;
     margin-bottom: 1em;
     color: #222;
 }
 
 .small-text {
-    font-size: 0.95rem; /* For footers, disclaimers, etc. */
+    font-size: 0.95rem;
+    /* For footers, disclaimers, etc. */
     color: #666;
 }
 
-h1.title { font-size: 2.5rem; }
-h2.subtitle { font-size: 1.5rem; }
-h3 { font-size: 1.2rem; font-weight: 600; }
-p, li, button, .faq-question { font-size: 1.125rem; }
+h1.title {
+    font-size: 2.5rem;
+}
+
+h2.subtitle {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+p,
+li,
+button,
+.faq-question {
+    font-size: 1.125rem;
+}
 
 /* Color variables */
 :root {
-  --color-title: #005fcc;
-  --color-subtitle: #444;
-  --color-text: #222;
-  --color-small: #666;
-  --color-accent: #005fcc;
+    --color-title: #005fcc;
+    --color-subtitle: #444;
+    --color-text: #222;
+    --color-small: #666;
+    --color-accent: #005fcc;
 }
 
-.title, h1.title {
-  color: var(--color-title);
+.title,
+h1.title {
+    color: var(--color-title);
 }
 
-.subtitle, h2.subtitle {
-  color: var(--color-subtitle);
+.subtitle,
+h2.subtitle {
+    color: var(--color-subtitle);
 }
 
-.text, p, li, button, .faq-question {
-  color: var(--color-text);
+.text,
+p,
+li,
+button,
+.faq-question {
+    color: var(--color-text);
 }
 
 .small-text {
-  color: var(--color-small);
+    color: var(--color-small);
 }
 
-.button, button, .faq-question {
-  background: #e6f0ff;
-  color: var(--color-accent);
+.button,
+button,
+.faq-question {
+    background: #e6f0ff;
+    color: var(--color-accent);
 }
 
-.button:hover, button:hover, .faq-question:hover {
-  background: var(--color-accent);
-  color: #fff;
+.button:hover,
+button:hover,
+.faq-question:hover {
+    background: var(--color-accent);
+    color: #fff;
 }
 
 /* Welcome section styles */
 .welcome-section {
     background: #fff !important;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     max-width: 900px;
     margin: 2em auto 3em auto;
     padding: 2.5em 2em;
@@ -303,115 +332,108 @@ p, li, button, .faq-question { font-size: 1.125rem; }
 
 /* Hero section styles (new) */
 .hero-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(120deg, #f5f3ef 0%, #eae6df 100%);
-  border-radius: 18px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-  padding: 3em 2em;
-  margin: 2em auto 3em auto;
-  max-width: 1200px;
-  gap: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(120deg, #f5f3ef 0%, #eae6df 100%);
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+    padding: 3em 2em;
+    margin: 2em auto 3em auto;
+    max-width: 1200px;
+    gap: 2.5em;
 }
 
 .hero-content {
-  flex: 1 1 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 1.2em;
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.2em;
 }
 
-.hero-greeting {
-  font-family: 'Dancing Script', cursive, sans-serif;
-  font-size: 2.5rem;
-  margin-bottom: 0.2em;
-  color: #222;
+.hero-content .title {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 0.2em;
 }
 
-.hero-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #222;
-  margin-bottom: 0.2em;
+.hero-content .subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #222;
+    margin-bottom: 0.5em;
 }
 
-.hero-highlight {
-  color: #b36a2e;
-  text-decoration: underline;
-  font-weight: 600;
+.hero-content .text {
+    font-size: 1.125rem;
+    color: #222;
+    margin-bottom: 0.7em;
 }
 
-.hero-subtitle {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #222;
-  margin-bottom: 0.5em;
+.hero-content .text strong,
+.hero-content .subtitle strong {
+    color: #b36a2e;
+    font-weight: 700;
 }
 
-.hero-text {
-  font-size: 1.1rem;
-  color: #222;
-  margin-bottom: 1.2em;
+.hero-content .text em {
+    font-style: italic;
+    text-decoration: underline;
 }
 
-.hero-italic {
-  font-style: italic;
-  text-decoration: underline;
+.hero-btn,
+.hero-content a.button {
+    display: inline-block;
+    background: #49553a;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 0.8em 2em;
+    text-decoration: none;
+    margin-top: 1em;
+    transition: background 0.2s;
 }
 
-.hero-accent {
-  color: #b36a2e;
-  font-weight: 700;
-}
-
-.hero-btn {
-  display: inline-block;
-  background: #49553a;
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 6px;
-  padding: 0.8em 2em;
-  text-decoration: none;
-  margin-top: 1em;
-  transition: background 0.2s;
-}
-
-.hero-btn:hover {
-  background: #2d3320;
+.hero-btn:hover,
+.hero-content a.button:hover {
+    background: #2d3320;
 }
 
 .hero-image {
-  flex: 1 1 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    flex: 1 1 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-image img {
-  max-width: 400px;
-  width: 100%;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    max-width: 400px;
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
 }
 
 @media (max-width: 900px) {
-  .hero-section {
-    flex-direction: column;
-    padding: 2em 0.5em;
-    gap: 1.5em;
-  }
-  .hero-image img {
-    max-width: 90vw;
-  }
-  .hero-content {
-    align-items: center;
-    text-align: center;
-  }
+    .hero-section {
+        flex-direction: column;
+        padding: 2em 0.5em;
+        gap: 1.5em;
+    }
+
+    .hero-image img {
+        max-width: 90vw;
+    }
+
+    .hero-content {
+        align-items: center;
+        text-align: center;
+    }
 }
 
 /* Welcome Ale section styles */
