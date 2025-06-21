@@ -33,7 +33,7 @@ li {
 }
 
 .title {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Main page title */
     font-weight: 700;
     margin-top: 2em;
     margin-bottom: 0.5em;
@@ -42,7 +42,7 @@ li {
 }
 
 .subtitle {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Section subtitle */
     font-weight: 500;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
@@ -50,12 +50,23 @@ li {
 }
 
 .text {
-    font-size: 1.125rem;
+    font-size: 1.125rem; /* Main body text */
     font-weight: 400;
     margin-bottom: 1em;
     color: #222;
 }
 
+.small-text {
+    font-size: 0.95rem; /* For footers, disclaimers, etc. */
+    color: #666;
+}
+
+h1.title { font-size: 2.5rem; }
+h2.subtitle { font-size: 1.5rem; }
+h3 { font-size: 1.2rem; font-weight: 600; }
+p, li, button, .faq-question { font-size: 1.125rem; }
+
+/* Welcome section styles */
 .welcome-section {
     background: magenta !important;
     color: white !important;
