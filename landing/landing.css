@@ -66,6 +66,41 @@ h2.subtitle { font-size: 1.5rem; }
 h3 { font-size: 1.2rem; font-weight: 600; }
 p, li, button, .faq-question { font-size: 1.125rem; }
 
+/* Color variables */
+:root {
+  --color-title: #005fcc;
+  --color-subtitle: #444;
+  --color-text: #222;
+  --color-small: #666;
+  --color-accent: #005fcc;
+}
+
+.title, h1.title {
+  color: var(--color-title);
+}
+
+.subtitle, h2.subtitle {
+  color: var(--color-subtitle);
+}
+
+.text, p, li, button, .faq-question {
+  color: var(--color-text);
+}
+
+.small-text {
+  color: var(--color-small);
+}
+
+.button, button, .faq-question {
+  background: #e6f0ff;
+  color: var(--color-accent);
+}
+
+.button:hover, button:hover, .faq-question:hover {
+  background: var(--color-accent);
+  color: #fff;
+}
+
 /* Welcome section styles */
 .welcome-section {
     background: magenta !important;
@@ -403,8 +438,8 @@ p, li, button, .faq-question { font-size: 1.125rem; }
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     padding: 24px 32px;
     margin: 16px 0;
-    max-width: 800px;
-    width: 90%;
+    max-width: 1100px;
+    width: 98vw;
     text-align: center;
     transition: box-shadow 0.2s, transform 0.2s;
     display: flex;
