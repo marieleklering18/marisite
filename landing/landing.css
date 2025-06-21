@@ -6,6 +6,55 @@ body,
     font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #222;
+    background: #fafbfc;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+
+p,
+li {
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.01em;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: #444;
+}
+
+.text {
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin-bottom: 1em;
+    color: #222;
+}
+
 .welcome-section {
     background: magenta !important;
     color: white !important;
