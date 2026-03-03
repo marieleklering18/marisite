@@ -39,184 +39,283 @@
 }
 </script>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
     rel="stylesheet">
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #fafaf9;
-      color: #1c1917;
+    :root {
+      --ink:    #1c1917;
+      --stone1: #fafaf9;
+      --stone2: #f5f5f4;
+      --muted1: #78716c;
+      --muted2: #a8a29e;
+      --rule:   #e7e5e4;
     }
 
-    h1, h2, h3 {
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      background-color: var(--stone1);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, blockquote p {
       font-family: 'Playfair Display', serif;
     }
 
-    @keyframes fade-in {
-      from { opacity: 0; transform: translateY(16px); }
+    /* ── Hero entrance ── */
+    @keyframes hero-in {
+      from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
     }
+    .hero-in { animation: hero-in 1.1s cubic-bezier(.22,1,.36,1) both; }
+    .hero-in-delay { animation-delay: 0.2s; }
 
-    .fade-in { animation: fade-in 1s ease-out forwards; }
+    /* ── Scroll reveal ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.85s cubic-bezier(.22,1,.36,1),
+                  transform 0.85s cubic-bezier(.22,1,.36,1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
 
-    nav a {
+    /* ── Nav ── */
+    .nav-link {
+      color: var(--muted2);
+      text-decoration: none;
       transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--ink); }
+
+    /* ── Mobile menu ── */
+    #mobile-menu {
+      display: none;
+      border-top: 1px solid var(--rule);
+    }
+    #mobile-menu.open { display: block; }
+
+    /* ── Hero scroll cue ── */
+    @keyframes bounce-y {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(6px); }
+    }
+    .bounce { animation: bounce-y 2s ease-in-out infinite; }
+
+    /* ── Grain overlay ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      pointer-events: none;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 128px;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <header class="sticky top-0 z-50 bg-stone-50 border-b border-stone-200" style="background-color:#fafaf9;">
+  <!-- ══ Navigation ══ -->
+  <header class="sticky top-0 z-50" style="background-color:var(--stone1); border-bottom:1px solid var(--rule);">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+
       <a href="index.html"
-        class="font-serif text-base tracking-widest uppercase text-stone-900"
-        style="font-family:'Playfair Display',serif; letter-spacing:0.18em;">
-        Mariele Klering
+        style="font-family:'Playfair Display',serif; letter-spacing:0.16em; font-size:0.9rem; color:var(--ink); text-decoration:none;">
+        MARIELE KLERING
       </a>
+
+      <!-- Desktop nav -->
       <nav class="hidden sm:flex items-center gap-8">
-        <a href="#about" class="text-xs tracking-widest uppercase text-stone-500 hover:text-stone-900">About</a>
-        <a href="#books" class="text-xs tracking-widest uppercase text-stone-500 hover:text-stone-900">Books</a>
-        <a href="#newsletter" class="text-xs tracking-widest uppercase text-stone-500 hover:text-stone-900">Newsletter</a>
+        <a href="#about"      class="nav-link text-xs tracking-widest uppercase">About</a>
+        <a href="#books"      class="nav-link text-xs tracking-widest uppercase">Books</a>
+        <a href="#newsletter" class="nav-link text-xs tracking-widest uppercase">Newsletter</a>
         <a href="sales.html"
-          class="text-xs tracking-widest uppercase text-stone-900 border border-stone-900 px-4 py-2 hover:bg-stone-900 hover:text-white transition">
+          class="text-xs tracking-widest uppercase px-4 py-2 border transition"
+          style="border-color:var(--ink); color:var(--ink); text-decoration:none;"
+          onmouseenter="this.style.background=getComputedStyle(document.documentElement).getPropertyValue('--ink');this.style.color='#fff';"
+          onmouseleave="this.style.background='transparent';this.style.color=getComputedStyle(document.documentElement).getPropertyValue('--ink');">
           Shop
         </a>
+      </nav>
+
+      <!-- Mobile hamburger -->
+      <button id="menu-btn" class="sm:hidden flex flex-col gap-1.5 p-1" aria-label="Open menu">
+        <span class="block w-6 h-px" style="background:var(--ink);"></span>
+        <span class="block w-6 h-px" style="background:var(--ink);"></span>
+        <span class="block w-4 h-px" style="background:var(--ink);"></span>
+      </button>
+    </div>
+
+    <!-- Mobile dropdown -->
+    <div id="mobile-menu">
+      <nav class="max-w-6xl mx-auto px-6 py-6 flex flex-col gap-5">
+        <a href="#about"      class="nav-link text-xs tracking-widest uppercase" onclick="closeMobileMenu()">About</a>
+        <a href="#books"      class="nav-link text-xs tracking-widest uppercase" onclick="closeMobileMenu()">Books</a>
+        <a href="#newsletter" class="nav-link text-xs tracking-widest uppercase" onclick="closeMobileMenu()">Newsletter</a>
+        <a href="sales.html"  class="text-xs tracking-widest uppercase" style="color:var(--ink); text-decoration:none;">Shop</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="relative overflow-hidden flex items-center justify-center" style="min-height:88vh; background-color:#1c1917;">
+  <!-- ══ Hero ══ -->
+  <section class="relative overflow-hidden flex flex-col items-center justify-center"
+    style="min-height:92vh; background-color:var(--ink);">
     <img src="banner.jpeg" alt=""
       class="absolute inset-0 w-full h-full object-cover object-center"
-      style="opacity:0.18;" />
-    <div class="relative z-10 text-center px-6 max-w-3xl mx-auto fade-in">
-      <div class="w-10 h-px mx-auto mb-10" style="background-color:#78716c;"></div>
-      <h1 class="text-6xl sm:text-8xl text-white leading-none tracking-tight">Mariele Klering</h1>
-      <div class="w-10 h-px mx-auto mt-10 mb-8" style="background-color:#78716c;"></div>
-      <p class="text-xs tracking-[0.3em] uppercase" style="color:#a8a29e;">
+      style="opacity:0.16;" />
+
+    <div class="relative z-10 text-center px-6 max-w-3xl mx-auto">
+      <div class="hero-in w-8 h-px mx-auto mb-10" style="background:var(--muted1);"></div>
+      <h1 class="hero-in text-6xl sm:text-8xl text-white leading-none" style="letter-spacing:-0.01em;">
+        Mariele Klering
+      </h1>
+      <div class="hero-in hero-in-delay w-8 h-px mx-auto mt-10 mb-8" style="background:var(--muted1);"></div>
+      <p class="hero-in hero-in-delay text-xs tracking-[0.32em] uppercase" style="color:var(--muted2);">
         Writer &nbsp;&middot;&nbsp; Storyteller &nbsp;&middot;&nbsp; Resilience Builder
       </p>
-      <div class="mt-14 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <div class="hero-in hero-in-delay mt-14 flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="#books"
-          class="px-8 py-3 text-xs tracking-widest uppercase bg-white text-stone-900 hover:bg-stone-100 transition">
+          class="px-8 py-3 text-xs tracking-widest uppercase transition hover:opacity-80"
+          style="background:#fff; color:var(--ink); text-decoration:none;">
           Browse Books
         </a>
         <a href="#newsletter"
-          class="px-8 py-3 text-xs tracking-widest uppercase border text-white hover:bg-white hover:text-stone-900 transition"
-          style="border-color:#78716c;">
+          class="px-8 py-3 text-xs tracking-widest uppercase border transition hover:opacity-70"
+          style="border-color:var(--muted1); color:var(--muted2); text-decoration:none;">
           Newsletter
         </a>
       </div>
+    </div>
+
+    <!-- Scroll cue -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 bounce" style="color:var(--muted1);">
+      <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="8" y1="0" x2="8" y2="20" stroke="currentColor" stroke-width="1"/>
+        <polyline points="4,16 8,21 12,16" stroke="currentColor" stroke-width="1" fill="none"/>
+      </svg>
     </div>
   </section>
 
   <main>
 
-    <!-- About -->
+    <!-- ══ About ══ -->
     <section id="about" class="py-28 px-6">
       <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-        <div class="overflow-hidden">
-          <img src="author-photo.JPG" alt="Photo of Mariele Klering"
-            class="w-full aspect-square object-cover object-top"
-            style="filter: grayscale(15%);" />
+
+        <div class="reveal overflow-hidden">
+          <img src="author-photo.JPG" alt="Mariele Klering"
+            class="w-full aspect-[4/5] object-cover object-top"
+            style="filter:grayscale(30%);" />
         </div>
-        <div>
-          <p class="text-xs tracking-[0.25em] uppercase mb-5" style="color:#a8a29e;">About</p>
+
+        <div class="reveal reveal-delay-1">
+          <p class="text-xs tracking-[0.25em] uppercase mb-6" style="color:var(--muted2);">About</p>
           <h2 class="text-4xl mb-8 leading-snug">Mariele Klering</h2>
-          <p class="leading-relaxed mb-4" style="color:#57534e; line-height:1.9;">
+          <p class="mb-5" style="color:var(--muted1); line-height:1.95; font-size:0.95rem;">
             Mariele Klering is a Brazilian writer and resilience advocate based in New Zealand. After over a
             decade in the tech industry, she stepped onto the Jiu-Jitsu mat during a time of personal
-            upheaval—and never left.
+            upheaval&mdash;and never left.
           </p>
-          <p class="leading-relaxed mb-10" style="color:#57534e; line-height:1.9;">
+          <p class="mb-10" style="color:var(--muted1); line-height:1.95; font-size:0.95rem;">
             Her writing explores the intersections of strength, loss, identity, and the quiet power of doing
             hard things. She is the author of <em>The Mat as a Mirror</em>, a book about how movement can
             hold, challenge, and reshape us.
           </p>
-          <div class="flex gap-8" style="border-top:1px solid #e7e5e4; padding-top:2rem;">
+          <div class="flex gap-8 pt-8" style="border-top:1px solid var(--rule);">
             <a href="https://www.instagram.com/marieklering/" target="_blank" rel="noopener noreferrer"
-              class="text-xs tracking-widest uppercase hover:text-stone-900 transition" style="color:#a8a29e;">
-              Instagram
-            </a>
+              class="nav-link text-xs tracking-widest uppercase">Instagram</a>
             <a href="https://marieleklering.substack.com/" target="_blank" rel="noopener noreferrer"
-              class="text-xs tracking-widest uppercase hover:text-stone-900 transition" style="color:#a8a29e;">
-              Substack
-            </a>
+              class="nav-link text-xs tracking-widest uppercase">Substack</a>
             <a href="https://www.linkedin.com/in/mariele-klering/" target="_blank" rel="noopener noreferrer"
-              class="text-xs tracking-widest uppercase hover:text-stone-900 transition" style="color:#a8a29e;">
-              LinkedIn
-            </a>
+              class="nav-link text-xs tracking-widest uppercase">LinkedIn</a>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="max-w-6xl mx-auto px-6"><div style="border-top:1px solid #e7e5e4;"></div></div>
+    <div class="max-w-6xl mx-auto px-6" style="border-top:1px solid var(--rule);"></div>
 
-    <!-- Books -->
+    <!-- ══ Books ══ -->
     <section id="books" class="py-28 px-6">
       <div class="max-w-6xl mx-auto">
-        <p class="text-xs tracking-[0.25em] uppercase mb-5 text-center" style="color:#a8a29e;">Featured Book</p>
-        <h2 class="text-4xl text-center mb-20">The Mat as a Mirror</h2>
+        <p class="reveal text-xs tracking-[0.25em] uppercase mb-5 text-center" style="color:var(--muted2);">Featured Book</p>
+        <h2 class="reveal text-4xl text-center mb-20">The Mat as a Mirror</h2>
+
         <div class="grid grid-cols-1 md:grid-cols-5 gap-16 items-start">
-          <div class="md:col-span-2">
-            <img src="cover.jpeg" alt="The Mat as a Mirror cover"
+          <div class="reveal md:col-span-2">
+            <img src="cover.jpeg" alt="The Mat as a Mirror"
               class="w-full h-auto"
-              style="box-shadow: 0 20px 60px rgba(0,0,0,0.18);" />
+              style="box-shadow:0 24px 64px rgba(0,0,0,0.16);" />
           </div>
+
           <div class="md:col-span-3 space-y-10">
-            <p class="text-xl leading-relaxed" style="font-family:'Playfair Display',serif; font-style:italic; color:#44403c;">
+            <p class="reveal text-xl leading-relaxed italic" style="color:#44403c;">
               A powerful collection of stories exploring how Brazilian Jiu-Jitsu helped women navigate
               hardship, rebuild confidence, and rediscover themselves.
             </p>
-            <div class="space-y-7">
-              <blockquote style="padding-left:1.25rem; border-left:2px solid #d6d3d1;">
-                <p class="text-sm leading-loose italic" style="color:#78716c;">
+
+            <div class="space-y-8">
+              <blockquote class="reveal" style="padding-left:1.25rem; border-left:2px solid var(--rule);">
+                <p class="text-sm leading-loose italic" style="color:var(--muted1);">
                   &ldquo;This book is a raw and beautiful invitation to sit with our bruises and see them as
                   maps of survival. Mariele writes with clarity, humility, and ferocity.&rdquo;
                 </p>
-                <footer class="mt-2 text-xs tracking-widest uppercase" style="color:#a8a29e;">
-                  — Editorial Review
+                <footer class="mt-3 text-xs tracking-widest uppercase" style="color:var(--muted2);">
+                  &mdash; Editorial Review
                 </footer>
               </blockquote>
-              <blockquote style="padding-left:1.25rem; border-left:2px solid #d6d3d1;">
-                <p class="text-sm leading-loose italic" style="color:#78716c;">
+
+              <blockquote class="reveal reveal-delay-1" style="padding-left:1.25rem; border-left:2px solid var(--rule);">
+                <p class="text-sm leading-loose italic" style="color:var(--muted1);">
                   &ldquo;The Mat as a Mirror isn&rsquo;t just about Jiu-Jitsu. It&rsquo;s about every woman
                   who&rsquo;s ever had to rebuild herself from scratch.&rdquo;
                 </p>
-                <footer class="mt-2 text-xs tracking-widest uppercase" style="color:#a8a29e;">
-                  — Early Reader
+                <footer class="mt-3 text-xs tracking-widest uppercase" style="color:var(--muted2);">
+                  &mdash; Early Reader
                 </footer>
               </blockquote>
-              <blockquote style="padding-left:1.25rem; border-left:2px solid #d6d3d1;">
-                <p class="text-sm leading-loose italic" style="color:#78716c;">
+
+              <blockquote class="reveal reveal-delay-2" style="padding-left:1.25rem; border-left:2px solid var(--rule);">
+                <p class="text-sm leading-loose italic" style="color:var(--muted1);">
                   &ldquo;A must-read for any woman who&rsquo;s ever felt like she had to fight to find herself
                   again.&rdquo;
                 </p>
-                <footer class="mt-2 text-xs tracking-widest uppercase" style="color:#a8a29e;">
-                  — Book Reviewer
+                <footer class="mt-3 text-xs tracking-widest uppercase" style="color:var(--muted2);">
+                  &mdash; Book Reviewer
                 </footer>
               </blockquote>
             </div>
-            <a href="https://www.amazon.com/dp/B0CQS7NBVP" target="_blank" rel="noopener noreferrer"
-              class="inline-block text-xs tracking-widest uppercase text-white px-8 py-4 transition hover:opacity-80"
-              style="background-color:#1c1917;">
-              Buy on Amazon
-            </a>
+
+            <div class="reveal">
+              <a href="https://www.amazon.com/dp/B0CQS7NBVP" target="_blank" rel="noopener noreferrer"
+                class="inline-block text-xs tracking-widest uppercase text-white px-8 py-4 transition hover:opacity-75"
+                style="background:var(--ink); text-decoration:none;">
+                Buy on Amazon
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Press -->
-    <section style="background-color:#f5f5f4;" class="py-24 px-6">
-      <div class="max-w-3xl mx-auto text-center">
-        <p class="text-xs tracking-[0.25em] uppercase mb-10" style="color:#a8a29e;">As Featured In</p>
-        <img src="m2woman-logo.svg" alt="M2 Woman Magazine" class="h-5 mx-auto mb-14" style="opacity:0.5;" />
-        <blockquote style="font-family:'Playfair Display',serif;">
+    <!-- ══ Press ══ -->
+    <section style="background-color:var(--stone2);" class="py-24 px-6">
+      <div class="max-w-3xl mx-auto text-center reveal">
+        <p class="text-xs tracking-[0.25em] uppercase mb-10" style="color:var(--muted2);">As Featured In</p>
+        <img src="m2woman-logo.svg" alt="M2 Woman Magazine" class="h-5 mx-auto mb-14" style="opacity:0.45;" />
+        <blockquote>
           <p class="text-xl leading-relaxed italic mb-4" style="color:#44403c;">
             &ldquo;What started as a hesitant &lsquo;okay&rsquo; to attend a self-defense seminar became
             something far bigger: a deep connection to Jiu-Jitsu&hellip; Mariele&rsquo;s journey is deeply
@@ -225,59 +324,60 @@
           <p class="text-lg leading-relaxed italic" style="color:#44403c;">
             &ldquo;With raw honesty, she shares personal excerpts alongside reflections on the transformative
             journey that changed her life&hellip; the mat wasn&rsquo;t just a place to master grappling
-            techniques—it became a space that mirrored life&rsquo;s biggest lessons.&rdquo;
+            techniques&mdash;it became a space that mirrored life&rsquo;s biggest lessons.&rdquo;
           </p>
         </blockquote>
-        <p class="mt-8 text-sm" style="color:#78716c;">
-          —
+        <p class="mt-8 text-sm" style="color:var(--muted1);">
+          &mdash;
           <a href="https://www.m2woman.com/the-mat-as-a-mirror-how-jiu-jitsu-proved-me-wrong/"
             target="_blank" rel="noopener noreferrer"
-            class="underline underline-offset-4 hover:text-stone-900 transition">
-            M2 Woman Magazine
-          </a>
+            class="underline underline-offset-4 transition hover:opacity-60">M2 Woman Magazine</a>
         </p>
         <a href="https://www.m2woman.com/the-mat-as-a-mirror-how-jiu-jitsu-proved-me-wrong/"
           target="_blank" rel="noopener noreferrer"
-          class="inline-block mt-6 text-xs tracking-[0.2em] uppercase hover:text-stone-900 transition"
-          style="color:#a8a29e; border-bottom:1px solid #a8a29e; padding-bottom:2px;">
+          class="inline-block mt-7 text-xs tracking-[0.2em] uppercase transition hover:opacity-60"
+          style="color:var(--muted2); border-bottom:1px solid var(--muted2); padding-bottom:2px; text-decoration:none;">
           Read the Full Article &rarr;
         </a>
       </div>
     </section>
 
-    <!-- Newsletter -->
-    <section id="newsletter" class="py-28 px-6 text-center" style="background-color:#1c1917;">
-      <p class="text-xs tracking-[0.25em] uppercase mb-5" style="color:#78716c;">Newsletter</p>
-      <h2 class="text-4xl text-white mb-4">Resilience Dose</h2>
-      <p class="text-sm mb-12 max-w-md mx-auto" style="color:#78716c;">
-        Weekly letters on resilience and critical thinking. Delivered directly to your inbox.
-      </p>
-      <div class="flex justify-center">
-        <iframe src="https://marieleklering.substack.com/embed" width="480" height="320"
-          style="border: 1px solid #3f3f46; background: transparent;"
-          frameborder="0" scrolling="no"></iframe>
+    <!-- ══ Newsletter ══ -->
+    <section id="newsletter" class="py-28 px-6 text-center" style="background-color:var(--ink);">
+      <div class="reveal">
+        <p class="text-xs tracking-[0.25em] uppercase mb-5" style="color:var(--muted1);">Newsletter</p>
+        <h2 class="text-4xl text-white mb-4">Resilience Dose</h2>
+        <p class="text-sm mb-12 max-w-sm mx-auto" style="color:var(--muted1); line-height:1.9;">
+          Weekly letters on resilience and critical thinking.<br>Delivered directly to your inbox.
+        </p>
+        <div class="flex justify-center">
+          <iframe src="https://marieleklering.substack.com/embed" width="480" height="320"
+            style="border:1px solid #3f3f46; background:transparent; max-width:100%;"
+            frameborder="0" scrolling="no"></iframe>
+        </div>
       </div>
     </section>
 
-    <!-- Events -->
+    <!-- ══ Events ══ -->
     <section class="py-28 px-6">
       <div class="max-w-4xl mx-auto">
-        <p class="text-xs tracking-[0.25em] uppercase mb-5" style="color:#a8a29e;">Events</p>
-        <h2 class="text-4xl mb-16">Upcoming</h2>
-        <div style="border-top:1px solid #e7e5e4;">
-          <div class="py-10 grid grid-cols-1 sm:grid-cols-4 gap-6" style="border-bottom:1px solid #e7e5e4;">
-            <div class="text-xs tracking-widest uppercase pt-1" style="color:#a8a29e;">May 30, 2025</div>
+        <p class="reveal text-xs tracking-[0.25em] uppercase mb-5" style="color:var(--muted2);">Events</p>
+        <h2 class="reveal text-4xl mb-16">Upcoming</h2>
+
+        <div style="border-top:1px solid var(--rule);">
+          <div class="reveal py-10 grid grid-cols-1 sm:grid-cols-4 gap-6" style="border-bottom:1px solid var(--rule);">
+            <div class="text-xs tracking-widest uppercase pt-1" style="color:var(--muted2);">May 30, 2025</div>
             <div class="sm:col-span-3">
-              <p class="text-base font-medium mb-1">
+              <p class="font-medium mb-1" style="font-size:0.95rem;">
                 Speaker &mdash;
                 <a href="https://www.m2woman.co.nz/journey-to-excellence/" target="_blank"
                   rel="noopener noreferrer"
-                  class="underline underline-offset-4 hover:opacity-60 transition">
+                  class="underline underline-offset-4 transition hover:opacity-60">
                   Journey to Excellence
                 </a>
               </p>
-              <p class="text-sm mb-3" style="color:#a8a29e;">M2 Woman Event &middot; Auckland, New Zealand</p>
-              <p class="text-sm leading-relaxed" style="color:#78716c;">
+              <p class="text-sm mb-3" style="color:var(--muted2);">M2 Woman Event &middot; Auckland, New Zealand</p>
+              <p class="text-sm leading-relaxed" style="color:var(--muted1);">
                 Mariele will share her journey of transformation through Jiu-Jitsu, grief, and growth,
                 illustrating how resilience is built not in theory, but in motion.
               </p>
@@ -289,30 +389,44 @@
 
   </main>
 
-  <!-- Footer -->
-  <footer class="py-14 px-6" style="background-color:#1c1917;">
-    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+  <!-- ══ Footer ══ -->
+  <footer class="py-14 px-6" style="background-color:var(--ink);">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
       <p class="text-xs tracking-[0.25em] uppercase" style="color:#57534e; font-family:'Playfair Display',serif;">
         Mariele Klering
       </p>
       <div class="flex gap-8">
         <a href="https://www.instagram.com/marieklering/" target="_blank" rel="noopener noreferrer"
-          class="text-xs tracking-widest uppercase transition hover:text-white" style="color:#57534e;">Instagram</a>
+          class="text-xs tracking-widest uppercase transition hover:text-white" style="color:#57534e; text-decoration:none;">Instagram</a>
         <a href="https://marieleklering.substack.com/" target="_blank" rel="noopener noreferrer"
-          class="text-xs tracking-widest uppercase transition hover:text-white" style="color:#57534e;">Substack</a>
+          class="text-xs tracking-widest uppercase transition hover:text-white" style="color:#57534e; text-decoration:none;">Substack</a>
         <a href="https://www.linkedin.com/in/mariele-klering/" target="_blank" rel="noopener noreferrer"
-          class="text-xs tracking-widest uppercase transition hover:text-white" style="color:#57534e;">LinkedIn</a>
+          class="text-xs tracking-widest uppercase transition hover:text-white" style="color:#57534e; text-decoration:none;">LinkedIn</a>
       </div>
       <p class="text-xs" style="color:#44403c;">&copy; 2025 Mariele Klering. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Fixed Subscribe -->
+  <!-- Fixed Subscribe pill -->
   <a href="#newsletter"
     class="fixed bottom-6 right-6 z-50 text-xs tracking-widest uppercase text-white px-5 py-3 transition hover:opacity-80"
-    style="background-color:#1c1917; box-shadow:0 4px 20px rgba(0,0,0,0.25);">
+    style="background:var(--ink); box-shadow:0 4px 24px rgba(0,0,0,0.28); text-decoration:none;">
     Subscribe
   </a>
+
+  <script>
+    // Mobile menu toggle
+    const btn  = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => menu.classList.toggle('open'));
+    function closeMobileMenu() { menu.classList.remove('open'); }
+
+    // Scroll reveal via IntersectionObserver
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
 
 </body>
 </html>
