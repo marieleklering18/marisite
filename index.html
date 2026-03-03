@@ -146,7 +146,7 @@
           style="border-color:var(--ink); color:var(--ink); text-decoration:none;"
           onmouseenter="this.style.background=getComputedStyle(document.documentElement).getPropertyValue('--ink');this.style.color='#fff';"
           onmouseleave="this.style.background='transparent';this.style.color=getComputedStyle(document.documentElement).getPropertyValue('--ink');">
-          Shop
+          Books
         </a>
       </nav>
 
@@ -164,7 +164,7 @@
         <a href="#about"      class="nav-link text-xs tracking-widest uppercase" onclick="closeMobileMenu()">About</a>
         <a href="#books"      class="nav-link text-xs tracking-widest uppercase" onclick="closeMobileMenu()">Books</a>
         <a href="#newsletter" class="nav-link text-xs tracking-widest uppercase" onclick="closeMobileMenu()">Newsletter</a>
-        <a href="sales.html"  class="text-xs tracking-widest uppercase" style="color:var(--ink); text-decoration:none;">Shop</a>
+        <a href="sales.html"  class="text-xs tracking-widest uppercase" style="color:var(--ink); text-decoration:none;">Books</a>
       </nav>
     </div>
   </header>
@@ -183,7 +183,7 @@
       </h1>
       <div class="hero-in hero-in-delay w-8 h-px mx-auto mt-10 mb-8" style="background:var(--muted1);"></div>
       <p class="hero-in hero-in-delay text-xs tracking-[0.32em] uppercase" style="color:var(--muted2);">
-        Writer &nbsp;&middot;&nbsp; Storyteller &nbsp;&middot;&nbsp; Resilience Builder
+        Author &nbsp;&middot;&nbsp; Speaker &nbsp;&middot;&nbsp; Purple Belt
       </p>
       <div class="hero-in hero-in-delay mt-14 flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="#books"
@@ -270,55 +270,34 @@
     <!-- ══ Books ══ -->
     <section id="books" class="py-28 px-6">
       <div class="max-w-6xl mx-auto">
-        <p class="reveal text-xs tracking-[0.25em] uppercase mb-5 text-center" style="color:var(--muted2);">Featured Book</p>
-        <h2 class="reveal text-4xl text-center mb-20">The Mat as a Mirror</h2>
+        <p class="reveal text-xs tracking-[0.25em] uppercase mb-5 text-center" style="color:var(--muted2);">Books</p>
+        <h2 class="reveal text-4xl text-center mb-20">Written Works</h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-5 gap-16 items-start">
-          <div class="reveal md:col-span-2">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+
+          <!-- Book 1: The Mat as a Mirror -->
+          <div class="reveal flex flex-col">
             <img src="cover.jpeg" alt="The Mat as a Mirror"
-              class="w-full h-auto"
+              class="w-full h-auto mb-10"
               style="box-shadow:0 24px 64px rgba(0,0,0,0.16);" />
-          </div>
-
-          <div class="md:col-span-3 space-y-10">
-            <p class="reveal text-xl leading-relaxed italic" style="color:#44403c;">
+            <p class="text-xs tracking-[0.2em] uppercase mb-3" style="color:var(--muted2);">The Mat as a Mirror</p>
+            <h3 class="mb-5" style="font-family:'Playfair Display',serif; font-size:clamp(1.2rem,2vw,1.5rem); line-height:1.3;">
+              Reflecting Stories of Women&rsquo;s Strength and Confidence through Jiu-Jitsu
+            </h3>
+            <p class="text-sm leading-relaxed mb-8" style="color:var(--muted1);">
               A powerful collection of stories exploring how Brazilian Jiu-Jitsu helped women navigate
               hardship, rebuild confidence, and rediscover themselves.
             </p>
-
-            <div class="space-y-8">
-              <blockquote class="reveal" style="padding-left:1.25rem; border-left:2px solid var(--rule);">
-                <p class="text-sm leading-loose italic" style="color:var(--muted1);">
-                  &ldquo;This book is a raw and beautiful invitation to sit with our bruises and see them as
-                  maps of survival. Mariele writes with clarity, humility, and ferocity.&rdquo;
-                </p>
-                <footer class="mt-3 text-xs tracking-widest uppercase" style="color:var(--muted2);">
-                  &mdash; Editorial Review
-                </footer>
-              </blockquote>
-
-              <blockquote class="reveal reveal-delay-1" style="padding-left:1.25rem; border-left:2px solid var(--rule);">
-                <p class="text-sm leading-loose italic" style="color:var(--muted1);">
-                  &ldquo;The Mat as a Mirror isn&rsquo;t just about Jiu-Jitsu. It&rsquo;s about every woman
-                  who&rsquo;s ever had to rebuild herself from scratch.&rdquo;
-                </p>
-                <footer class="mt-3 text-xs tracking-widest uppercase" style="color:var(--muted2);">
-                  &mdash; Early Reader
-                </footer>
-              </blockquote>
-
-              <blockquote class="reveal reveal-delay-2" style="padding-left:1.25rem; border-left:2px solid var(--rule);">
-                <p class="text-sm leading-loose italic" style="color:var(--muted1);">
-                  &ldquo;A must-read for any woman who&rsquo;s ever felt like she had to fight to find herself
-                  again.&rdquo;
-                </p>
-                <footer class="mt-3 text-xs tracking-widest uppercase" style="color:var(--muted2);">
-                  &mdash; Book Reviewer
-                </footer>
-              </blockquote>
-            </div>
-
-            <div class="reveal">
+            <blockquote class="mb-10" style="padding-left:1.25rem; border-left:2px solid var(--rule);">
+              <p class="text-sm leading-loose italic" style="color:var(--muted1);">
+                &ldquo;This book is a raw and beautiful invitation to sit with our bruises and see them as
+                maps of survival. Mariele writes with clarity, humility, and ferocity.&rdquo;
+              </p>
+              <footer class="mt-3 text-xs tracking-widest uppercase" style="color:var(--muted2);">
+                &mdash; Editorial Review
+              </footer>
+            </blockquote>
+            <div class="mt-auto">
               <a href="https://www.amazon.com/dp/B0CQS7NBVP" target="_blank" rel="noopener noreferrer"
                 class="inline-block text-xs tracking-widest uppercase text-white px-8 py-4 transition hover:opacity-75"
                 style="background:var(--ink); text-decoration:none;">
@@ -326,6 +305,39 @@
               </a>
             </div>
           </div>
+
+          <!-- Book 2: The Mat Journey -->
+          <div class="reveal reveal-delay-1 flex flex-col">
+            <img src="cover2.png" alt="The Mat Journey: A Nonlinear Guide to Jiu-Jitsu"
+              class="w-full h-auto mb-10"
+              style="box-shadow:0 24px 64px rgba(0,0,0,0.16);" />
+            <p class="text-xs tracking-[0.2em] uppercase mb-3" style="color:var(--muted2);">The Mat Journey</p>
+            <h3 class="mb-5" style="font-family:'Playfair Display',serif; font-size:clamp(1.2rem,2vw,1.5rem); line-height:1.3;">
+              A Nonlinear Guide to Jiu-Jitsu
+            </h3>
+            <p class="text-sm leading-relaxed mb-8" style="color:var(--muted1);">
+              A choose-your-own-path book for all belt levels. Part survival guide, part comedy relief,
+              part philosophy of the mat. Not a manual, not a memoir &mdash; an open mat for your brain,
+              your body, and your story.
+            </p>
+            <blockquote class="mb-10" style="padding-left:1.25rem; border-left:2px solid var(--rule);">
+              <p class="text-sm leading-loose italic" style="color:var(--muted1);">
+                &ldquo;Whether you&rsquo;re a white belt learning to survive or a black belt who still laughs
+                at mat fails, this book will remind you why you keep coming back.&rdquo;
+              </p>
+              <footer class="mt-3 text-xs tracking-widest uppercase" style="color:var(--muted2);">
+                &mdash; Amazon Reader
+              </footer>
+            </blockquote>
+            <div class="mt-auto">
+              <a href="https://www.amazon.com/dp/B0FY5N1LC2" target="_blank" rel="noopener noreferrer"
+                class="inline-block text-xs tracking-widest uppercase text-white px-8 py-4 transition hover:opacity-75"
+                style="background:var(--ink); text-decoration:none;">
+                Buy on Amazon
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -359,22 +371,6 @@
           style="color:var(--muted2); border-bottom:1px solid var(--muted2); padding-bottom:2px; text-decoration:none;">
           Read the Full Article &rarr;
         </a>
-      </div>
-    </section>
-
-    <!-- ══ Newsletter ══ -->
-    <section id="newsletter" class="py-28 px-6 text-center" style="background-color:var(--ink);">
-      <div class="reveal">
-        <p class="text-xs tracking-[0.25em] uppercase mb-5" style="color:var(--muted1);">Newsletter</p>
-        <h2 class="text-4xl text-white mb-4">Resilience Dose</h2>
-        <p class="text-sm mb-12 max-w-sm mx-auto" style="color:var(--muted1); line-height:1.9;">
-          Weekly letters on resilience and critical thinking.<br>Delivered directly to your inbox.
-        </p>
-        <div class="flex justify-center">
-          <iframe src="https://marieleklering.substack.com/embed" width="480" height="320"
-            style="border:1px solid #3f3f46; background:transparent; max-width:100%;"
-            frameborder="0" scrolling="no"></iframe>
-        </div>
       </div>
     </section>
 
@@ -487,6 +483,22 @@
             class="underline underline-offset-4 transition hover:opacity-60"
             style="color:var(--ink);">Get in touch.</a>
         </p>
+      </div>
+    </section>
+
+    <!-- ══ Newsletter ══ -->
+    <section id="newsletter" class="py-28 px-6 text-center" style="background-color:var(--ink);">
+      <div class="reveal">
+        <p class="text-xs tracking-[0.25em] uppercase mb-5" style="color:var(--muted1);">Newsletter</p>
+        <h2 class="text-4xl text-white mb-4">Resilience Dose</h2>
+        <p class="text-sm mb-12 max-w-sm mx-auto" style="color:var(--muted1); line-height:1.9;">
+          Weekly letters on resilience and critical thinking.<br>Delivered directly to your inbox.
+        </p>
+        <div class="flex justify-center">
+          <iframe src="https://marieleklering.substack.com/embed" width="480" height="320"
+            style="border:1px solid #3f3f46; background:transparent; max-width:100%;"
+            frameborder="0" scrolling="no"></iframe>
+        </div>
       </div>
     </section>
 
