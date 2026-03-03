@@ -6,135 +6,207 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Mariele Klering – Sales Page" />
-  <title>Mariele Klering – Sales Page</title>
+  <title>Mariele Klering – Shop</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@600&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
     rel="stylesheet">
   <style>
     body {
       font-family: 'Inter', sans-serif;
+      background-color: #fafaf9;
+      color: #1c1917;
     }
 
-    h1,
-    h2,
-    h3 {
+    h1, h2, h3 {
       font-family: 'Playfair Display', serif;
     }
 
     @keyframes fade-in {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
-    .animate-fade-in {
-      animation: fade-in 1s ease-out forwards;
-    }
+    .fade-in { animation: fade-in 1s ease-out forwards; }
   </style>
 </head>
 
-<body class="bg-white text-gray-800">
+<body>
 
-  <!-- Hero Section -->
-  <section class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
-    <img src="banner.jpeg" alt="Background"
-      class="absolute inset-0 -z-10 h-full w-full object-cover object-center opacity-30" />
-    <div class="mx-auto max-w-3xl px-6 text-center animate-fade-in">
-      <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Your Headline Here</h1>
-      <p class="mt-6 text-lg leading-8 text-gray-300">A short, compelling subheadline that speaks directly to your
-        reader.</p>
-      <div class="mt-10">
+  <!-- Navigation -->
+  <header class="sticky top-0 z-50 border-b" style="background-color:#fafaf9; border-color:#e7e5e4;">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html"
+        class="text-base tracking-widest uppercase"
+        style="font-family:'Playfair Display',serif; letter-spacing:0.18em; color:#1c1917;">
+        Mariele Klering
+      </a>
+      <nav class="hidden sm:flex items-center gap-8">
+        <a href="index.html#about" class="text-xs tracking-widest uppercase transition" style="color:#a8a29e;" onmouseover="this.style.color='#1c1917'" onmouseout="this.style.color='#a8a29e'">About</a>
+        <a href="index.html#books" class="text-xs tracking-widest uppercase transition" style="color:#a8a29e;" onmouseover="this.style.color='#1c1917'" onmouseout="this.style.color='#a8a29e'">Books</a>
+        <a href="index.html#newsletter" class="text-xs tracking-widest uppercase transition" style="color:#a8a29e;" onmouseover="this.style.color='#1c1917'" onmouseout="this.style.color='#a8a29e'">Newsletter</a>
+        <a href="sales.html"
+          class="text-xs tracking-widest uppercase px-4 py-2 text-white"
+          style="background-color:#1c1917;">
+          Shop
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden flex items-center justify-center" style="min-height:70vh; background-color:#1c1917;">
+    <img src="banner.jpeg" alt=""
+      class="absolute inset-0 w-full h-full object-cover object-center"
+      style="opacity:0.18;" />
+    <div class="relative z-10 text-center px-6 max-w-3xl mx-auto fade-in">
+      <div class="w-10 h-px mx-auto mb-10" style="background-color:#78716c;"></div>
+      <h1 class="text-5xl sm:text-7xl text-white leading-none tracking-tight">Your Headline Here</h1>
+      <div class="w-10 h-px mx-auto mt-10 mb-8" style="background-color:#78716c;"></div>
+      <p class="text-sm leading-relaxed max-w-xl mx-auto" style="color:#a8a29e;">
+        A short, compelling subheadline that speaks directly to your reader and invites them to take action.
+      </p>
+      <div class="mt-12">
         <a href="#offer"
-          class="rounded-full bg-blue-600 hover:bg-blue-700 px-8 py-3 text-base font-semibold text-white shadow-md transition">Get
-          Started</a>
+          class="px-8 py-3 text-xs tracking-widest uppercase bg-white text-stone-900 hover:bg-stone-100 transition">
+          Get Started
+        </a>
       </div>
     </div>
   </section>
 
-  <main class="mx-auto max-w-4xl px-6 py-16 space-y-20">
+  <main>
 
     <!-- What You'll Get -->
-    <section class="text-center animate-fade-in">
-      <h2 class="text-3xl font-bold mb-4">What You'll Get</h2>
-      <p class="text-gray-500 mb-10 max-w-xl mx-auto">Describe what's included or what transformation the reader can
-        expect.</p>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
-        <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
-          <div class="text-blue-600 text-4xl mb-3">✦</div>
-          <h3 class="text-lg font-semibold mb-2">Benefit One</h3>
-          <p class="text-gray-600 text-sm">Short description of this benefit or feature.</p>
-        </div>
-        <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
-          <div class="text-blue-600 text-4xl mb-3">✦</div>
-          <h3 class="text-lg font-semibold mb-2">Benefit Two</h3>
-          <p class="text-gray-600 text-sm">Short description of this benefit or feature.</p>
-        </div>
-        <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
-          <div class="text-blue-600 text-4xl mb-3">✦</div>
-          <h3 class="text-lg font-semibold mb-2">Benefit Three</h3>
-          <p class="text-gray-600 text-sm">Short description of this benefit or feature.</p>
+    <section class="py-28 px-6">
+      <div class="max-w-5xl mx-auto">
+        <p class="text-xs tracking-[0.25em] uppercase mb-5 text-center" style="color:#a8a29e;">What You'll Get</p>
+        <h2 class="text-4xl text-center mb-6">Everything Included</h2>
+        <p class="text-sm text-center max-w-xl mx-auto mb-20" style="color:#78716c;">
+          Describe what's included or what transformation the reader can expect. Keep it concise and specific.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-px" style="background-color:#e7e5e4;">
+          <div class="p-10" style="background-color:#fafaf9;">
+            <p class="text-xs tracking-[0.2em] uppercase mb-4" style="color:#a8a29e;">01</p>
+            <h3 class="text-xl mb-4">Benefit One</h3>
+            <p class="text-sm leading-relaxed" style="color:#78716c;">
+              Short description of this benefit or what the reader will gain from it.
+            </p>
+          </div>
+          <div class="p-10" style="background-color:#fafaf9;">
+            <p class="text-xs tracking-[0.2em] uppercase mb-4" style="color:#a8a29e;">02</p>
+            <h3 class="text-xl mb-4">Benefit Two</h3>
+            <p class="text-sm leading-relaxed" style="color:#78716c;">
+              Short description of this benefit or what the reader will gain from it.
+            </p>
+          </div>
+          <div class="p-10" style="background-color:#fafaf9;">
+            <p class="text-xs tracking-[0.2em] uppercase mb-4" style="color:#a8a29e;">03</p>
+            <h3 class="text-xl mb-4">Benefit Three</h3>
+            <p class="text-sm leading-relaxed" style="color:#78716c;">
+              Short description of this benefit or what the reader will gain from it.
+            </p>
+          </div>
         </div>
       </div>
     </section>
+
+    <div class="max-w-6xl mx-auto px-6"><div style="border-top:1px solid #e7e5e4;"></div></div>
 
     <!-- Testimonials -->
-    <section class="bg-gray-50 rounded-xl px-8 py-12 shadow-inner">
-      <h2 class="text-3xl font-bold text-center mb-10">What People Are Saying</h2>
-      <div class="space-y-6 max-w-2xl mx-auto">
-        <blockquote class="border-l-4 border-blue-600 pl-6 text-gray-700 italic">
-          &ldquo;Testimonial quote goes here. Make it specific and impactful.&rdquo;
-          <footer class="mt-2 text-sm font-semibold text-gray-500 not-italic">— Name, Title</footer>
-        </blockquote>
-        <blockquote class="border-l-4 border-blue-600 pl-6 text-gray-700 italic">
-          &ldquo;Another testimonial quote that builds trust and social proof.&rdquo;
-          <footer class="mt-2 text-sm font-semibold text-gray-500 not-italic">— Name, Title</footer>
-        </blockquote>
+    <section class="py-28 px-6" style="background-color:#f5f5f4;">
+      <div class="max-w-4xl mx-auto">
+        <p class="text-xs tracking-[0.25em] uppercase mb-5 text-center" style="color:#a8a29e;">Testimonials</p>
+        <h2 class="text-4xl text-center mb-20">What People Are Saying</h2>
+        <div class="space-y-14">
+          <blockquote class="max-w-2xl mx-auto text-center">
+            <p class="text-xl leading-relaxed italic mb-6" style="font-family:'Playfair Display',serif; color:#44403c;">
+              &ldquo;Testimonial quote goes here. Make it specific, emotional, and results-oriented.&rdquo;
+            </p>
+            <footer class="text-xs tracking-widest uppercase" style="color:#a8a29e;">— Name, Title</footer>
+          </blockquote>
+          <div style="border-top:1px solid #e7e5e4; max-width:4rem; margin:0 auto;"></div>
+          <blockquote class="max-w-2xl mx-auto text-center">
+            <p class="text-xl leading-relaxed italic mb-6" style="font-family:'Playfair Display',serif; color:#44403c;">
+              &ldquo;Another testimonial that builds trust and demonstrates the real impact of your work.&rdquo;
+            </p>
+            <footer class="text-xs tracking-widest uppercase" style="color:#a8a29e;">— Name, Title</footer>
+          </blockquote>
+        </div>
       </div>
     </section>
 
-    <!-- Offer / Pricing -->
-    <section id="offer" class="text-center">
-      <h2 class="text-3xl font-bold mb-4">The Offer</h2>
-      <p class="text-gray-500 mb-10 max-w-xl mx-auto">Describe your offer, pricing, or what the reader gets when they
-        take action.</p>
-      <div class="bg-white border border-gray-200 rounded-2xl shadow-lg p-10 max-w-md mx-auto">
-        <p class="text-5xl font-bold text-blue-600 mb-2">$00</p>
-        <p class="text-gray-500 text-sm mb-6">One-time / monthly / description</p>
-        <ul class="text-left space-y-3 text-gray-700 mb-8">
-          <li class="flex items-center gap-2"><span class="text-blue-600">✓</span> Included item one</li>
-          <li class="flex items-center gap-2"><span class="text-blue-600">✓</span> Included item two</li>
-          <li class="flex items-center gap-2"><span class="text-blue-600">✓</span> Included item three</li>
-        </ul>
-        <a href="#"
-          class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-base font-semibold py-3 rounded-full shadow-md transition">Buy
-          Now</a>
+    <!-- Offer -->
+    <section id="offer" class="py-28 px-6">
+      <div class="max-w-4xl mx-auto">
+        <p class="text-xs tracking-[0.25em] uppercase mb-5 text-center" style="color:#a8a29e;">The Offer</p>
+        <h2 class="text-4xl text-center mb-6">Ready to Begin?</h2>
+        <p class="text-sm text-center max-w-md mx-auto mb-20" style="color:#78716c;">
+          Describe your offer clearly. What does the reader get, and what does it cost?
+        </p>
+        <div class="max-w-md mx-auto" style="border:1px solid #e7e5e4; padding:3rem;">
+          <p class="text-xs tracking-[0.2em] uppercase mb-6 text-center" style="color:#a8a29e;">Includes</p>
+          <ul class="space-y-4 mb-10">
+            <li class="flex items-start gap-3 text-sm" style="color:#57534e;">
+              <span class="mt-0.5 text-xs" style="color:#a8a29e;">—</span>
+              Included item one
+            </li>
+            <li class="flex items-start gap-3 text-sm" style="color:#57534e;">
+              <span class="mt-0.5 text-xs" style="color:#a8a29e;">—</span>
+              Included item two
+            </li>
+            <li class="flex items-start gap-3 text-sm" style="color:#57534e;">
+              <span class="mt-0.5 text-xs" style="color:#a8a29e;">—</span>
+              Included item three
+            </li>
+          </ul>
+          <div style="border-top:1px solid #e7e5e4; padding-top:2rem; margin-bottom:2rem;">
+            <p class="text-5xl text-center mb-1" style="font-family:'Playfair Display',serif;">$00</p>
+            <p class="text-xs text-center tracking-widest uppercase" style="color:#a8a29e;">One-time payment</p>
+          </div>
+          <a href="#"
+            class="block w-full text-center text-xs tracking-widest uppercase text-white py-4 transition hover:opacity-80"
+            style="background-color:#1c1917;">
+            Buy Now
+          </a>
+        </div>
       </div>
     </section>
 
     <!-- Final CTA -->
-    <section class="text-center py-12">
-      <h2 class="text-3xl font-bold mb-4">Ready to Begin?</h2>
-      <p class="text-gray-500 mb-8 max-w-xl mx-auto">A final nudge — remind the reader why this matters and invite them
-        to take action.</p>
-      <a href="#offer"
-        class="rounded-full bg-blue-600 hover:bg-blue-700 px-10 py-4 text-base font-semibold text-white shadow-md transition">Yes,
-        I'm Ready</a>
+    <section class="py-24 px-6 text-center" style="background-color:#1c1917;">
+      <div class="max-w-2xl mx-auto">
+        <div class="w-10 h-px mx-auto mb-10" style="background-color:#78716c;"></div>
+        <h2 class="text-4xl text-white mb-6">Still Thinking About It?</h2>
+        <p class="text-sm leading-relaxed mb-12" style="color:#78716c;">
+          A final nudge — remind the reader why this matters and invite them to take the next step.
+        </p>
+        <a href="#offer"
+          class="px-8 py-3 text-xs tracking-widest uppercase bg-white text-stone-900 hover:bg-stone-100 transition">
+          I&rsquo;m Ready
+        </a>
+      </div>
     </section>
 
   </main>
 
   <!-- Footer -->
-  <footer class="text-center text-sm text-gray-500 py-8 border-t border-gray-100">
-    <p><a href="index.html" class="text-blue-600 hover:underline">← Back to main site</a></p>
-    <p class="mt-2">&copy; 2025 Mariele Klering. All rights reserved.</p>
+  <footer class="py-14 px-6" style="background-color:#1c1917;">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+      <p class="text-xs tracking-[0.25em] uppercase" style="color:#57534e; font-family:'Playfair Display',serif;">
+        Mariele Klering
+      </p>
+      <div class="flex gap-8">
+        <a href="https://www.instagram.com/marieklering/" target="_blank" rel="noopener noreferrer"
+          class="text-xs tracking-widest uppercase transition hover:text-white" style="color:#57534e;">Instagram</a>
+        <a href="https://marieleklering.substack.com/" target="_blank" rel="noopener noreferrer"
+          class="text-xs tracking-widest uppercase transition hover:text-white" style="color:#57534e;">Substack</a>
+        <a href="https://www.linkedin.com/in/mariele-klering/" target="_blank" rel="noopener noreferrer"
+          class="text-xs tracking-widest uppercase transition hover:text-white" style="color:#57534e;">LinkedIn</a>
+      </div>
+      <p class="text-xs" style="color:#44403c;">&copy; 2025 Mariele Klering. All rights reserved.</p>
+    </div>
   </footer>
 
 </body>
-
 </html>
