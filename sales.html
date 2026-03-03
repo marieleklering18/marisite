@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mariele Klering – Sales Page" />
+  <title>Mariele Klering – Sales Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@600&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fade-in 1s ease-out forwards;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+  <!-- Hero Section -->
+  <section class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+    <img src="banner.jpeg" alt="Background"
+      class="absolute inset-0 -z-10 h-full w-full object-cover object-center opacity-30" />
+    <div class="mx-auto max-w-3xl px-6 text-center animate-fade-in">
+      <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Your Headline Here</h1>
+      <p class="mt-6 text-lg leading-8 text-gray-300">A short, compelling subheadline that speaks directly to your
+        reader.</p>
+      <div class="mt-10">
+        <a href="#offer"
+          class="rounded-full bg-blue-600 hover:bg-blue-700 px-8 py-3 text-base font-semibold text-white shadow-md transition">Get
+          Started</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="mx-auto max-w-4xl px-6 py-16 space-y-20">
+
+    <!-- What You'll Get -->
+    <section class="text-center animate-fade-in">
+      <h2 class="text-3xl font-bold mb-4">What You'll Get</h2>
+      <p class="text-gray-500 mb-10 max-w-xl mx-auto">Describe what's included or what transformation the reader can
+        expect.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+          <div class="text-blue-600 text-4xl mb-3">✦</div>
+          <h3 class="text-lg font-semibold mb-2">Benefit One</h3>
+          <p class="text-gray-600 text-sm">Short description of this benefit or feature.</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+          <div class="text-blue-600 text-4xl mb-3">✦</div>
+          <h3 class="text-lg font-semibold mb-2">Benefit Two</h3>
+          <p class="text-gray-600 text-sm">Short description of this benefit or feature.</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+          <div class="text-blue-600 text-4xl mb-3">✦</div>
+          <h3 class="text-lg font-semibold mb-2">Benefit Three</h3>
+          <p class="text-gray-600 text-sm">Short description of this benefit or feature.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="bg-gray-50 rounded-xl px-8 py-12 shadow-inner">
+      <h2 class="text-3xl font-bold text-center mb-10">What People Are Saying</h2>
+      <div class="space-y-6 max-w-2xl mx-auto">
+        <blockquote class="border-l-4 border-blue-600 pl-6 text-gray-700 italic">
+          &ldquo;Testimonial quote goes here. Make it specific and impactful.&rdquo;
+          <footer class="mt-2 text-sm font-semibold text-gray-500 not-italic">— Name, Title</footer>
+        </blockquote>
+        <blockquote class="border-l-4 border-blue-600 pl-6 text-gray-700 italic">
+          &ldquo;Another testimonial quote that builds trust and social proof.&rdquo;
+          <footer class="mt-2 text-sm font-semibold text-gray-500 not-italic">— Name, Title</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Offer / Pricing -->
+    <section id="offer" class="text-center">
+      <h2 class="text-3xl font-bold mb-4">The Offer</h2>
+      <p class="text-gray-500 mb-10 max-w-xl mx-auto">Describe your offer, pricing, or what the reader gets when they
+        take action.</p>
+      <div class="bg-white border border-gray-200 rounded-2xl shadow-lg p-10 max-w-md mx-auto">
+        <p class="text-5xl font-bold text-blue-600 mb-2">$00</p>
+        <p class="text-gray-500 text-sm mb-6">One-time / monthly / description</p>
+        <ul class="text-left space-y-3 text-gray-700 mb-8">
+          <li class="flex items-center gap-2"><span class="text-blue-600">✓</span> Included item one</li>
+          <li class="flex items-center gap-2"><span class="text-blue-600">✓</span> Included item two</li>
+          <li class="flex items-center gap-2"><span class="text-blue-600">✓</span> Included item three</li>
+        </ul>
+        <a href="#"
+          class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-base font-semibold py-3 rounded-full shadow-md transition">Buy
+          Now</a>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="text-center py-12">
+      <h2 class="text-3xl font-bold mb-4">Ready to Begin?</h2>
+      <p class="text-gray-500 mb-8 max-w-xl mx-auto">A final nudge — remind the reader why this matters and invite them
+        to take action.</p>
+      <a href="#offer"
+        class="rounded-full bg-blue-600 hover:bg-blue-700 px-10 py-4 text-base font-semibold text-white shadow-md transition">Yes,
+        I'm Ready</a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-500 py-8 border-t border-gray-100">
+    <p><a href="index.html" class="text-blue-600 hover:underline">← Back to main site</a></p>
+    <p class="mt-2">&copy; 2025 Mariele Klering. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>
