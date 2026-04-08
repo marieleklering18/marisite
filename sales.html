@@ -5,8 +5,19 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mariele Klering – Books" />
-  <title>Mariele Klering – Books</title>
+  <meta name="description" content="Shop books by Mariele Klering – The Mat as a Mirror and The Mat Journey. Stories of resilience, strength, and Jiu-Jitsu. Bulk orders for academies welcome." />
+  <meta name="keywords" content="Mariele Klering, books, The Mat as a Mirror, The Mat Journey, Jiu-Jitsu books, resilience, women in BJJ" />
+  <meta name="author" content="Mariele Klering" />
+  <meta property="og:title" content="Books by Mariele Klering" />
+  <meta property="og:description" content="Shop The Mat as a Mirror and The Mat Journey – powerful books on resilience, identity, and what Jiu-Jitsu teaches you about life." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://marieklering.com/sales.html" />
+  <meta property="og:image" content="https://marieklering.com/cover.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Books by Mariele Klering" />
+  <meta name="twitter:description" content="Shop The Mat as a Mirror and The Mat Journey – powerful books on resilience, identity, and what Jiu-Jitsu teaches you about life." />
+  <meta name="twitter:image" content="https://marieklering.com/cover.jpeg" />
+  <title>Books – Mariele Klering</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
@@ -85,7 +96,7 @@
       content: '';
       position: fixed;
       inset: 0;
-      z-index: 9999;
+      z-index: 50;
       pointer-events: none;
       opacity: 0.025;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
@@ -451,8 +462,11 @@
     /* ── Responsive ── */
     @media (max-width: 900px) {
       .hero-grid { grid-template-columns: 1fr; }
-      .hero-visual-col { display: none; }
-      .hero-text-col { padding: 72px 28px; }
+      .hero-visual-col { display: flex; padding: 0 28px 56px; justify-content: center; }
+      .books-stack { width: 200px; height: 280px; }
+      .book-card { width: 150px; }
+      .book-card img { width: 150px !important; height: 210px !important; }
+      .hero-text-col { padding: 72px 28px 40px; }
       .press-bar { padding: 18px 28px; }
       .book-section { grid-template-columns: 1fr; gap: 48px; padding: 72px 28px; }
       .author-section { grid-template-columns: 1fr; gap: 48px; padding: 72px 28px; }
@@ -537,7 +551,7 @@
     <div class="press-items-row">
       <span class="press-item-txt">M2 Woman Magazine</span>
       <span class="press-item-txt">BJJHOOD Podcast</span>
-      <span class="press-item-txt">Amazon Best Seller</span>
+      <span class="press-item-txt">Amazon #1 New Release</span>
     </div>
   </div>
 
@@ -559,8 +573,8 @@
           <span class="meta-pill">Women's Perspectives</span>
         </div>
         <p class="book-desc">
-          What happens when you step onto the mat carrying grief, self-doubt, and a decade of surviving spaces
-          that weren't built for you? You find out what you're made of. <em>The Mat as a Mirror</em> is a
+          What happens when you step onto the mat carrying grief, self-doubt, and everything you thought defined you?
+          You find out what you're made of. <em>The Mat as a Mirror</em> is a
           collection of powerful, raw stories — Mariele's own and those of women who found Jiu-Jitsu at their
           lowest point and used it to rebuild.
         </p>
@@ -627,7 +641,7 @@
         <div class="reveal review-card">
           <div class="review-stars">★ ★ ★ ★ ★</div>
           <p class="review-text">"The Mat as a Mirror isn't just about Jiu-Jitsu. It's about every woman who's ever had to rebuild herself from scratch."</p>
-          <div class="review-source">Early Reader</div>
+          <div class="review-source">Amazon Reviewer</div>
           <div class="review-book-tag">The Mat as a Mirror</div>
         </div>
         <div class="reveal reveal-delay-1 review-card">
@@ -639,7 +653,7 @@
         <div class="reveal reveal-delay-2 review-card">
           <div class="review-stars">★ ★ ★ ★ ★</div>
           <p class="review-text">"This book doesn't flinch from the hard stuff — and that's what makes it beautiful. It's about grit, grief, and the quiet power of starting again."</p>
-          <div class="review-source">Reader Testimonial</div>
+          <div class="review-source">Amazon Reviewer</div>
           <div class="review-book-tag">The Mat as a Mirror</div>
         </div>
         <div class="reveal review-card">
@@ -651,7 +665,7 @@
         <div class="reveal reveal-delay-1 review-card">
           <div class="review-stars">★ ★ ★ ★ ★</div>
           <p class="review-text">"A must-read for any woman who's ever felt like she had to fight to find herself again. Powerful from the first page."</p>
-          <div class="review-source">Book Reviewer</div>
+          <div class="review-source">Amazon Reviewer</div>
           <div class="review-book-tag">The Mat as a Mirror</div>
         </div>
         <div class="reveal reveal-delay-2 review-card">
@@ -739,7 +753,7 @@
         <p style="font-family:'Playfair Display',serif; color:#fff; font-size:1.05rem;">Mariele Klering</p>
         <p class="text-xs tracking-widest uppercase mt-1" style="color:#57534e;">Writer &middot; Storyteller &middot; Resilience Builder</p>
       </div>
-      <div class="flex gap-8">
+      <div class="flex gap-8 flex-wrap justify-center">
         <a href="index.html"
           class="text-xs tracking-widest uppercase transition hover:text-white" style="color:#57534e; text-decoration:none;">Website</a>
         <a href="https://www.instagram.com/marieklering/" target="_blank" rel="noopener noreferrer"
@@ -748,6 +762,8 @@
           class="text-xs tracking-widest uppercase transition hover:text-white" style="color:#57534e; text-decoration:none;">Newsletter</a>
         <a href="https://www.amazon.com/stores/Mariele-Klering/author/B0CQS7NB1X" target="_blank" rel="noopener noreferrer"
           class="text-xs tracking-widest uppercase transition hover:text-white" style="color:#57534e; text-decoration:none;">Amazon</a>
+        <a href="mailto:contact@marieklering.com"
+          class="text-xs tracking-widest uppercase transition hover:text-white" style="color:#57534e; text-decoration:none;">Contact</a>
       </div>
       <p class="text-xs" style="color:#44403c;">&copy; 2026 Mariele Klering. All rights reserved.</p>
     </div>
