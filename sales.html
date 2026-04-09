@@ -3,6 +3,7 @@
 
 <head>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="canonical" href="https://marieklering.com/sales.html" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Shop books by Mariele Klering – The Mat as a Mirror and The Mat Journey. Stories of resilience, strength, and Jiu-Jitsu. Bulk orders for academies welcome." />
@@ -474,6 +475,33 @@
       .section-divider { margin: 0 28px; }
     }
   </style>
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "The Mat as a Mirror",
+      "alternateName": "Reflecting Stories of Women's Strength and Confidence through Jiu-Jitsu",
+      "author": { "@type": "Person", "name": "Mariele Klering", "url": "https://marieklering.com" },
+      "isbn": "9780473784423",
+      "url": "https://www.amazon.com/dp/B0CQS7NBVP",
+      "description": "A powerful collection of stories exploring how Brazilian Jiu-Jitsu helped women navigate hardship, rebuild confidence, and rediscover themselves.",
+      "inLanguage": "en",
+      "genre": "Self-help / Sports"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "The Mat Journey",
+      "alternateName": "A Nonlinear Guide to Jiu-Jitsu",
+      "author": { "@type": "Person", "name": "Mariele Klering", "url": "https://marieklering.com" },
+      "url": "https://www.amazon.com/dp/B0FY5N1LC2",
+      "description": "A choose-your-own-path book for all belt levels. Part survival guide, part comedy relief, part philosophy of the mat.",
+      "inLanguage": "en",
+      "genre": "Sports / Martial Arts"
+    }
+  ]
+  </script>
 </head>
 
 <body>
@@ -491,7 +519,7 @@
         <a href="index.html#newsletter" class="nav-link text-xs tracking-widest uppercase">Newsletter</a>
         <a href="sales.html" class="nav-shop">Shop</a>
       </nav>
-      <button id="menu-btn" class="sm:hidden flex flex-col gap-1.5 p-1" aria-label="Open menu">
+      <button id="menu-btn" class="sm:hidden flex flex-col gap-1.5 p-1" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <span class="block w-6 h-px" style="background:var(--ink);"></span>
         <span class="block w-6 h-px" style="background:var(--ink);"></span>
         <span class="block w-4 h-px" style="background:var(--ink);"></span>
@@ -561,7 +589,7 @@
     <section class="book-section" id="books" style="background-color:var(--stone1);">
       <div class="reveal">
         <img src="cover.jpeg" alt="The Mat as a Mirror"
-          style="width:100%; max-width:320px; border-radius:3px; box-shadow:20px 20px 60px rgba(0,0,0,0.18); display:block;" />
+          style="width:100%; max-width:320px; border-radius:3px; box-shadow:20px 20px 60px rgba(0,0,0,0.18); display:block;" loading="lazy" />
       </div>
       <div class="reveal reveal-delay-1">
         <p class="section-eyebrow">Book One</p>
@@ -629,7 +657,7 @@
       </div>
       <div class="reveal reveal-delay-1 flex justify-center">
         <img src="cover2.png" alt="The Mat Journey"
-          style="width:100%; max-width:320px; border-radius:3px; box-shadow:20px 20px 60px rgba(0,0,0,0.18); display:block;" />
+          style="width:100%; max-width:320px; border-radius:3px; box-shadow:20px 20px 60px rgba(0,0,0,0.18); display:block;" loading="lazy" />
       </div>
     </section>
 
@@ -681,7 +709,7 @@
     <section class="author-section" style="background-color:var(--stone1);">
       <div class="reveal">
         <img src="author-photo.JPG" alt="Mariele Klering"
-          style="width:100%; max-width:300px; aspect-ratio:3/4; object-fit:cover; object-position:top; border-radius:3px; box-shadow:20px 20px 60px rgba(0,0,0,0.14); filter:grayscale(20%);" />
+          style="width:100%; max-width:300px; aspect-ratio:3/4; object-fit:cover; object-position:top; border-radius:3px; box-shadow:20px 20px 60px rgba(0,0,0,0.14); filter:grayscale(20%);" loading="lazy" />
       </div>
       <div class="reveal reveal-delay-1">
         <p class="section-eyebrow">About the Author</p>
@@ -773,8 +801,14 @@
     // Mobile menu toggle
     const btn  = document.getElementById('menu-btn');
     const menu = document.getElementById('mobile-menu');
-    btn.addEventListener('click', () => menu.classList.toggle('open'));
-    function closeMobileMenu() { menu.classList.remove('open'); }
+    btn.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+    });
+    function closeMobileMenu() {
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
 
     // Scroll reveal
     const io = new IntersectionObserver((entries) => {

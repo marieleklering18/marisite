@@ -3,6 +3,7 @@
 
 <head>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="canonical" href="https://marieklering.com/" />
   <meta charset="UTF-8" />
   <meta name="description"
     content="Official website of Mariele Klering – author of 'The Mat as a Mirror'. Explore her books, stories of resilience, and weekly newsletter on strength, healing, and growth." />
@@ -96,6 +97,15 @@
     }
     .nav-link:hover { color: var(--ink); }
 
+    /* ── Shop button ── */
+    .nav-shop {
+      border: 1px solid var(--ink);
+      color: var(--ink);
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-shop:hover { background: var(--ink); color: #fff; }
+
     /* ── Mobile menu ── */
     #mobile-menu {
       display: none;
@@ -141,17 +151,13 @@
         <a href="#about"      class="nav-link text-xs tracking-widest uppercase">About</a>
         <a href="#books"      class="nav-link text-xs tracking-widest uppercase">Books</a>
         <a href="#newsletter" class="nav-link text-xs tracking-widest uppercase">Newsletter</a>
-        <a href="sales.html"
-          class="text-xs tracking-widest uppercase px-4 py-2 border transition"
-          style="border-color:var(--ink); color:var(--ink); text-decoration:none;"
-          onmouseenter="this.style.background=getComputedStyle(document.documentElement).getPropertyValue('--ink');this.style.color='#fff';"
-          onmouseleave="this.style.background='transparent';this.style.color=getComputedStyle(document.documentElement).getPropertyValue('--ink');">
+        <a href="sales.html" class="nav-shop text-xs tracking-widest uppercase px-4 py-2">
           Shop
         </a>
       </nav>
 
       <!-- Mobile hamburger -->
-      <button id="menu-btn" class="sm:hidden flex flex-col gap-1.5 p-1" aria-label="Open menu">
+      <button id="menu-btn" class="sm:hidden flex flex-col gap-1.5 p-1" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <span class="block w-6 h-px" style="background:var(--ink);"></span>
         <span class="block w-6 h-px" style="background:var(--ink);"></span>
         <span class="block w-4 h-px" style="background:var(--ink);"></span>
@@ -217,7 +223,7 @@
         <div class="reveal overflow-hidden">
           <img src="author-photo.JPG" alt="Mariele Klering"
             class="w-full aspect-[4/5] object-cover object-top"
-            style="filter:grayscale(30%);" />
+            style="filter:grayscale(30%);" loading="lazy" />
         </div>
 
         <div class="reveal reveal-delay-1">
@@ -276,7 +282,7 @@
           <div class="reveal flex flex-col">
             <img src="cover.jpeg" alt="The Mat as a Mirror"
               class="w-full h-auto mb-10"
-              style="box-shadow:0 24px 64px rgba(0,0,0,0.16);" />
+              style="box-shadow:0 24px 64px rgba(0,0,0,0.16);" loading="lazy" />
             <p class="text-xs tracking-[0.2em] uppercase mb-3" style="color:var(--muted2);">The Mat as a Mirror</p>
             <h3 class="mb-5" style="font-family:'Playfair Display',serif; font-size:clamp(1.2rem,2vw,1.5rem); line-height:1.3;">
               Reflecting Stories of Women&rsquo;s Strength and Confidence through Jiu-Jitsu
@@ -312,7 +318,7 @@
           <div class="reveal reveal-delay-1 flex flex-col">
             <img src="cover2.png" alt="The Mat Journey: A Nonlinear Guide to Jiu-Jitsu"
               class="w-full h-auto mb-10"
-              style="box-shadow:0 24px 64px rgba(0,0,0,0.16);" />
+              style="box-shadow:0 24px 64px rgba(0,0,0,0.16);" loading="lazy" />
             <p class="text-xs tracking-[0.2em] uppercase mb-3" style="color:var(--muted2);">The Mat Journey</p>
             <h3 class="mb-5" style="font-family:'Playfair Display',serif; font-size:clamp(1.2rem,2vw,1.5rem); line-height:1.3;">
               A Nonlinear Guide to Jiu-Jitsu
@@ -428,7 +434,7 @@
             <!-- Event photo -->
             <div class="mb-10" style="border:1px solid var(--rule); overflow:hidden;">
               <img src="m2-woman1.jpg" alt="Mariele Klering speaking at Journey to Excellence, Auckland 2025"
-                style="width:100%; display:block; filter:grayscale(15%);" />
+                style="width:100%; display:block; filter:grayscale(15%);" loading="lazy" />
             </div>
 
             <!-- Pull quote -->
@@ -526,7 +532,7 @@
 
   <!-- Fixed Subscribe pill -->
   <a href="#newsletter"
-    class="fixed bottom-6 right-6 z-50 text-xs tracking-widest uppercase text-white px-5 py-3 transition hover:opacity-80"
+    class="fixed bottom-20 right-5 sm:bottom-6 sm:right-6 z-50 text-xs tracking-widest uppercase text-white px-5 py-3 transition hover:opacity-80"
     style="background:var(--ink); box-shadow:0 4px 24px rgba(0,0,0,0.28); text-decoration:none;">
     Subscribe
   </a>
@@ -535,8 +541,14 @@
     // Mobile menu toggle
     const btn  = document.getElementById('menu-btn');
     const menu = document.getElementById('mobile-menu');
-    btn.addEventListener('click', () => menu.classList.toggle('open'));
-    function closeMobileMenu() { menu.classList.remove('open'); }
+    btn.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+    });
+    function closeMobileMenu() {
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
 
     // Scroll reveal via IntersectionObserver
     const io = new IntersectionObserver((entries) => {
