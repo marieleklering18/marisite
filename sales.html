@@ -480,25 +480,74 @@
     {
       "@context": "https://schema.org",
       "@type": "Book",
+      "@id": "https://marieklering.com/sales.html#book-1",
       "name": "The Mat as a Mirror",
       "alternateName": "Reflecting Stories of Women's Strength and Confidence through Jiu-Jitsu",
-      "author": { "@type": "Person", "name": "Mariele Klering", "url": "https://marieklering.com" },
+      "author": { "@id": "https://marieklering.com/#person" },
       "isbn": "9780473784423",
-      "url": "https://www.amazon.com/dp/B0CQS7NBVP",
-      "description": "A powerful collection of stories exploring how Brazilian Jiu-Jitsu helped women navigate hardship, rebuild confidence, and rediscover themselves.",
       "inLanguage": "en",
-      "genre": "Self-help / Sports"
+      "genre": ["Self-help", "Sports", "Women's Studies"],
+      "award": "Amazon #1 New Release",
+      "description": "A powerful collection of stories exploring how Brazilian Jiu-Jitsu helped women navigate hardship, rebuild confidence, and rediscover themselves.",
+      "url": "https://marieklering.com/sales.html",
+      "offers": [
+        {
+          "@type": "Offer",
+          "url": "https://www.amazon.com/dp/B0CQS7NBVP",
+          "availability": "https://schema.org/InStock",
+          "seller": { "@type": "Organization", "name": "Amazon" }
+        },
+        {
+          "@type": "Offer",
+          "url": "https://www.barnesandnoble.com/w/the-mat-as-a-mirror-mariele-klering/1149817877?ean=9780473784423",
+          "availability": "https://schema.org/InStock",
+          "seller": { "@type": "Organization", "name": "Barnes & Noble" }
+        }
+      ],
+      "review": [
+        {
+          "@type": "Review",
+          "reviewBody": "A raw and beautiful invitation to sit with our bruises and see them as maps of survival. Mariele writes with clarity, humility, and ferocity.",
+          "author": { "@type": "Organization", "name": "Editorial Review" }
+        },
+        {
+          "@type": "Review",
+          "reviewBody": "Inspiring and uplifting, this book brims with positivity. The narration is lively, engaging and informative. A collection of empowering stories.",
+          "author": { "@type": "Organization", "name": "Pages & Paws" }
+        },
+        {
+          "@type": "Review",
+          "reviewBody": "Mariele's journey is deeply personal, yet profoundly universal.",
+          "author": { "@type": "Organization", "name": "M2 Woman Magazine" }
+        }
+      ]
     },
     {
       "@context": "https://schema.org",
       "@type": "Book",
+      "@id": "https://marieklering.com/sales.html#book-2",
       "name": "The Mat Journey",
       "alternateName": "A Nonlinear Guide to Jiu-Jitsu",
-      "author": { "@type": "Person", "name": "Mariele Klering", "url": "https://marieklering.com" },
-      "url": "https://www.amazon.com/dp/B0FY5N1LC2",
-      "description": "A choose-your-own-path book for all belt levels. Part survival guide, part comedy relief, part philosophy of the mat.",
+      "author": { "@id": "https://marieklering.com/#person" },
       "inLanguage": "en",
-      "genre": "Sports / Martial Arts"
+      "genre": ["Sports", "Martial Arts", "Humor"],
+      "description": "A choose-your-own-path book for all belt levels. Part survival guide, part comedy relief, part philosophy of the mat.",
+      "url": "https://marieklering.com/sales.html",
+      "offers": [
+        {
+          "@type": "Offer",
+          "url": "https://www.amazon.com/dp/B0FY5N1LC2",
+          "availability": "https://schema.org/InStock",
+          "seller": { "@type": "Organization", "name": "Amazon" }
+        }
+      ],
+      "review": [
+        {
+          "@type": "Review",
+          "reviewBody": "Whether you're a white belt or a black belt, this book will remind you why you keep coming back. An open mat for your brain and your story.",
+          "author": { "@type": "Organization", "name": "Amazon Reviewer" }
+        }
+      ]
     }
   ]
   </script>
